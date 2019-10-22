@@ -6709,3 +6709,39 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
   Rendered users/index.html.erb within layouts/application (2.2ms)
 Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=2a6eaa0c97903e955ad0ee16943b214a86a498b23aeda975&code=4/sQH6imXGdJXW5-kD2qlX7k_RB-Gj8orjdoNE68asGcbSWhl88BIpgGDgaHjGDgtBesQtvadsAUqP5miNvB6OeAA&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=berkeley.edu&session_state=61ccb1815e721e681bd0fc3973371b664b60faea..153f&prompt=none" for ::1 at 2019-10-22 15:11:13 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"2a6eaa0c97903e955ad0ee16943b214a86a498b23aeda975", "code"=>"4/sQH6imXGdJXW5-kD2qlX7k_RB-Gj8orjdoNE68asGcbSWhl88BIpgGDgaHjGDgtBesQtvadsAUqP5miNvB6OeAA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"berkeley.edu", "session_state"=>"61ccb1815e721e681bd0fc3973371b664b60faea..153f", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "cpyles@berkeley.edu"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for ::1 at 2019-10-22 15:11:13 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-10-22 15:11:17 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2019-10-22 15:11:20 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:12:09 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 118ms (Views: 117.7ms | ActiveRecord: 0.0ms)

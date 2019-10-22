@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'static/index'
+
+  get 'dashboard/index'
+
   # resources :schedules
   get 'sessions/create'
   delete 'sessions', to: 'sessions#destroy'
@@ -12,7 +16,7 @@ Rails.application.routes.draw do
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
 
-  root 'users#index'
+  root 'static#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
