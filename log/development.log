@@ -6521,3 +6521,17 @@ Processing by SchedulesController#index as HTML
   [1m[35mSchedule Load (0.1ms)[0m  SELECT "schedules".* FROM "schedules"
   Rendered schedules/index.html.erb within layouts/application (5.2ms)
 Completed 200 OK in 38ms (Views: 25.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 14:37:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 292ms (Views: 279.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffolds.self-a6f5eee4e90cbcb6350336e876a27cdf24896ebcd100d0e681c84028410b53d7.css?body=1" for ::1 at 2019-10-22 14:37:54 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-10-22 14:37:54 -0700
