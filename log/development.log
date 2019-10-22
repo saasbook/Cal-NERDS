@@ -6645,3 +6645,67 @@ Started GET "/auth/google_oauth2" for ::1 at 2019-10-22 15:04:18 -0700
 
 
 Started GET "/auth/google_oauth2" for ::1 at 2019-10-22 15:04:18 -0700
+
+
+Started GET "/auth/google_oauth2/callback?state=40527a0b422e7f56360e84d0cc5da35e5964322ea9e8e202&code=4/sQE1iVPgOV0sBCLnVzPnYiqKXSQZPzuiJVHH91rrJK-GDi40aJ37K5WiQsSfZagC1MIWJ8L1uy4UjewGmZe2iUo&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=berkeley.edu&session_state=42fd08f5031d9a012f3f7fde569a2925a68c41d5..b584&prompt=none" for ::1 at 2019-10-22 15:06:52 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"40527a0b422e7f56360e84d0cc5da35e5964322ea9e8e202", "code"=>"4/sQE1iVPgOV0sBCLnVzPnYiqKXSQZPzuiJVHH91rrJK-GDi40aJ37K5WiQsSfZagC1MIWJ8L1uy4UjewGmZe2iUo", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"berkeley.edu", "session_state"=>"42fd08f5031d9a012f3f7fde569a2925a68c41d5..b584", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "cpyles@berkeley.edu"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("email", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "cpyles@berkeley.edu"], ["name", "Christopher Pyles"], ["created_at", "2019-10-22 22:06:52.587274"], ["updated_at", "2019-10-22 22:06:52.587274"]]
+  [1m[35m (40.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 44.3ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:06:52 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:07:36 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 2.2ms)
+
+ActionView::Template::Error (undefined local variable or method `sessions_path' for #<#<Class:0x007fbcc737ac40>:0x007fbcc76c7d30>
+Did you mean?  sessions_create_path):
+    24: 			</div>
+    25: 		<% else %>
+    26: 			<div style="text-align: right;">
+    27: 				<%= link_to "Log Out", sessions_path, method: :delete, data: { confirm: "Are you sure?" } %>
+    28: 			</div>
+    29: 		<% end %>
+    30: 
+  app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___2075092248780191235_70224388137600'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (84.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (180.9ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:08:11 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-10-22 15:08:41 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.3ms)

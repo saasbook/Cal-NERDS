@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   # resources :schedules
   get 'sessions/create'
+  delete 'sessions', to: 'sessions#destroy'
 
   resources :users do
     resources :schedules  
