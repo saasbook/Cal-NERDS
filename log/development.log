@@ -6535,3 +6535,113 @@ Started GET "/assets/scaffolds.self-a6f5eee4e90cbcb6350336e876a27cdf24896ebcd100
 
 
 Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-10-22 14:37:54 -0700
+  [1m[36m (43.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (43.9ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20191018205037)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (42.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191018205037"]]
+  [1m[36m (40.0ms)[0m  [1mCOMMIT[0m
+Migrating to GoogleOauth (20191018205105)
+  [1m[35m (40.2ms)[0m  BEGIN
+  [1m[36m (3.9ms)[0m  [1mALTER TABLE "users" ADD "google_token" character varying[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "google_refresh_token" character varying
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20191018205105"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddDetailsToUser (20191019012008)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "provider" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "uid" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "oauth_token" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "oauth_expires_at" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191019012008"]]
+  [1m[36m (40.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddEmailToUsers (20191019014544)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191019014544"]]
+  [1m[36m (39.6ms)[0m  [1mCOMMIT[0m
+Migrating to AddNameToUsers (20191019014647)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "name" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191019014647"]]
+  [1m[36m (40.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSchedules (20191019074147)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (41.0ms)[0m  [1mCREATE TABLE "schedules" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191019074147"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddTimesToSchedule (20191019074731)
+  [1m[35m (40.6ms)[0m  BEGIN
+  [1m[36m (3.4ms)[0m  [1mALTER TABLE "schedules" ADD "mon" character varying[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schedules" ADD "tue" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" ADD "wed" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" ADD "thu" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" ADD "fri" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" ADD "user_id" character varying
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20191019074731"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Migrating to AddStartDateToSchedule (20191019074816)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" ADD "start_date" character varying
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20191019074816"]]
+  [1m[35m (40.6ms)[0m  COMMIT
+Migrating to RemoveBadTimesFromSchedule (20191019195244)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "schedules" DROP "mon"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schedules" DROP "tue"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" DROP "wed"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" DROP "thu"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schedules" DROP "fri"
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" ADD "mon_times" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" ADD "tue_times" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" ADD "wed_times" character varying[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "schedules" ADD "thu_times" character varying
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schedules" ADD "fri_times" character varying[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20191019195244"]]
+  [1m[36m (40.8ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveHyphensFromSchedules (20191019200135)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (45.4ms)[0m  [1mALTER TABLE "schedules" DROP "mon-times"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'schedules'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.7ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/" for ::1 at 2019-10-22 15:04:16 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 217ms (Views: 203.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-22 15:04:18 -0700
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-10-22 15:04:18 -0700
