@@ -271,7 +271,7 @@
   <script type="text/javascript">
     
     $(".time-entry").on("click", function() {
-      $(this).css("background", $(this).css("background-color") == "rgb(255, 255, 255)" ? "#3B7EA1" : "rgb(255, 255, 255)");
+      $(this).css("background", $(this).css("background-color") === "rgb(255, 255, 255)" ? "#3B7EA1" : "rgb(255, 255, 255)");
       $("#" + $(this).attr("id") + "-cb").prop("checked", !$("#" + $(this).attr("id") + "-cb").prop("checked"));
     })
 
