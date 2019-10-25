@@ -6767,3 +6767,57 @@ Started GET "/" for ::1 at 2019-10-25 13:06:45 -0700
 Processing by StaticController#index as HTML
   Rendered static/index.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=25d0915caad06eff771b90185824ad9b8294f0f2b868ea7f&code=4/sgFx4MjVXkL-sOczxvTUMooPInG9s1PHb7hL0wgGqZW9H0QFCyRgOexLDxWYE1BQbdnJlrQAX8FOrs0TD1dC_LM&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=berkeley.edu&session_state=71df3cc1ea27b9ddf34b948050acbfa906670b21..5276&prompt=none" for ::1 at 2019-10-25 13:08:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"25d0915caad06eff771b90185824ad9b8294f0f2b868ea7f", "code"=>"4/sgFx4MjVXkL-sOczxvTUMooPInG9s1PHb7hL0wgGqZW9H0QFCyRgOexLDxWYE1BQbdnJlrQAX8FOrs0TD1dC_LM", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"berkeley.edu", "session_state"=>"71df3cc1ea27b9ddf34b948050acbfa906670b21..5276", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "cpyles@berkeley.edu"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 47ms (ActiveRecord: 30.3ms)
+
+
+Started GET "/users" for ::1 at 2019-10-25 13:08:59 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for ::1 at 2019-10-25 13:09:15 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fSsqgzukAXmssYIe1uUh5Zj13aPJnPmJPwy1DfMHrkAd77DgpMMzh+5i2cbLrI+PhKGNigpYR9EOfzjVY+mD4Q=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-25 13:09:15 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-10-25 13:09:20 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-10-25 13:10:23 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2019-10-25 13:10:26 -0700
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :set_current_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-10-25 13:10:26 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
