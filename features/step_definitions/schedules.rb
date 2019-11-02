@@ -1,6 +1,10 @@
 Given /^I am logged in as a student director$/ do 
 end
 
+Given /I have( created)* a schedule with the following times:/ do |table|
+    
+end
+
 When /^I select the following times:$/ do |table|
     puts 'success'
 end
@@ -14,7 +18,7 @@ end
 Then /^it should have no times$/ do
 end
 
-When /^I update the schedule:$/ do |table|
+When /I update the schedule:/ do |table|
 end
 
 
