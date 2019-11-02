@@ -5,6 +5,9 @@
 # files.
 
 require 'cucumber/rails'
+require 'capybara-screenshot/cucumber'
+Capybara.save_path = "./tmp/failures"
+
 
 # frozen_string_literal: true
 

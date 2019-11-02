@@ -24,7 +24,8 @@
 			</div>
 		<% else %>
 			<div style="text-align: right;">
-				<%= link_to "Log Out", sessions_path, method: :delete, data: { confirm: "Are you sure?" } %>
+				Hello, <%= @current_user.name %>. 
+				<%= link_to "Log Out", sessions_path, method: :delete %>
 			</div>
 		<% end %>
 

@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20191102011835) do
     t.string   "email"
     t.string   "name"
     t.boolean  "admin"
-    t.boolean  "auth_user"
+    t.boolean  "auth"
   end
 
 end
