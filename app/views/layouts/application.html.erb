@@ -18,13 +18,19 @@
 
 	<div class="container">
 
-		<% if session[:user_id].nil? %>
+		<% if @current_user.nil? %>
 			<div style="text-align: right;">
 				<%= link_to "Log In with Google", "/auth/google_oauth2" %>
 			</div>
 		<% else %>
 			<div style="text-align: right;">
 				<%= link_to "Log Out", sessions_path, method: :delete, data: { confirm: "Are you sure?" } %>
+			</div>
+		<% end %>
+
+		<% if !notice.nil? %>
+			<div class="alert alert-info" role="alert">
+				<h4><%= notice %></h1>
 			</div>
 		<% end %>
 

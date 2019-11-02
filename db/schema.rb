@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191019195244) do
+ActiveRecord::Schema.define(version: 20191102011835) do
 
   create_table "schedules", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20191019195244) do
     t.string   "oauth_expires_at"
     t.string   "email"
     t.string   "name"
+    t.boolean  "admin"
+    t.boolean  "auth_user"
   end
 
 end

@@ -7273,3 +7273,584 @@ Started GET "/" for ::1 at 2019-11-01 17:33:27 -0700
 Processing by StaticController#index as HTML
   Rendered static/index.html.erb within layouts/application (176.8ms)
 Completed 200 OK in 245ms (Views: 238.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:57:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 19ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/static_controller.rb:9:in `set_current_user'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (80.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (177.7ms)
+
+
+Started GET "/auth/google_oauth2/callback?state=0e14eae4d815eb1d433f7a1c7299952237ec0a3bb3b1a813&code=4/swFp4UZAlTqM2Idbdc9e2NW7gheZpoS_edjJoAZzvn62EAv50wrqH7_Gu0AaeVTfvVnVzHgNnRahzW2CWA3GvHY&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.email%20https://www.googleapis.com/auth/userinfo.profile&authuser=1&hd=berkeley.edu&session_state=b583a96886688b05ad400e4ad99ef3439fa2ef3c..f40e&prompt=none" for ::1 at 2019-11-01 17:57:53 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"0e14eae4d815eb1d433f7a1c7299952237ec0a3bb3b1a813", "code"=>"4/swFp4UZAlTqM2Idbdc9e2NW7gheZpoS_edjJoAZzvn62EAv50wrqH7_Gu0AaeVTfvVnVzHgNnRahzW2CWA3GvHY", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"1", "hd"=>"berkeley.edu", "session_state"=>"b583a96886688b05ad400e4ad99ef3439fa2ef3c..f40e", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "cpyles@berkeley.edu"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("email", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "cpyles@berkeley.edu"], ["name", "Christopher Pyles"], ["created_at", "2019-11-02 00:57:53.397590"], ["updated_at", "2019-11-02 00:57:53.397590"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:57:53 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (192.2ms)
+Completed 200 OK in 240ms (Views: 238.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.fittext.self-abe5071b8f0af1501250f665a40d72159f2cf9f5ca252b02d845d97a617c1e77.js?body=1" for ::1 at 2019-11-01 17:57:53 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 17:58:34 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 34.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:59:25 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-d3d936ed4dc8fe53dc80dfc4ac6a23b2b1302abe5fda8f8a4cc73504b9d776c9.css?body=1" for ::1 at 2019-11-01 17:59:25 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:00:31 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/static.self-c46e67dd86359dfde69c34d4d92e32db75d437c1cb3698f510d0ecd7c0d15301.css?body=1" for ::1 at 2019-11-01 18:00:31 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:02:30 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:02:36 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:02:41 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-a1d53620a1b98eae10e974516e925f6a389a2b22cfd6deca16535fc230181608.css?body=1" for ::1 at 2019-11-01 18:02:41 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:03:01 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-ae915681e20bb7d20a706b134a9c4181c16daced12914d49dda305e7eb891199.css?body=1" for ::1 at 2019-11-01 18:03:01 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:03:06 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-5bc2c587158d99d5d202d5dfda3f8e4f0f12690f3fc66068830d3a63a6213aed.css?body=1" for ::1 at 2019-11-01 18:03:06 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:03:10 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-346630862537d5ee4f5289626fd07b0760d094c19dce8f652f27f8d0d8458b8b.css?body=1" for ::1 at 2019-11-01 18:03:10 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:03:19 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-c80f2b1771b0bbed87ee45cc58c4d18488b2b3d6f1bf80640a104e701c025001.css?body=1" for ::1 at 2019-11-01 18:03:19 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:05:36 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:06:11 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-340b53b3b3654db67c2ef68798251ff858f168e2f1824dfa4030088a416c0b26.css?body=1" for ::1 at 2019-11-01 18:06:11 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:06:29 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-9578edfc914a39dc56a3efe520bc4e68b50cc74a32cf751659d3fb7277729c9d.css?body=1" for ::1 at 2019-11-01 18:06:29 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:06:56 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-5781ff14e368b3f2b2104c4dac9adeaf82223a88cb85c407473532a12319eba6.css?body=1" for ::1 at 2019-11-01 18:06:56 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:06:58 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:07:25 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-2ee97306be02132e43538bb072c34ad2160ef8b0a9a1bfd69f07d8c8ec38eafa.css?body=1" for ::1 at 2019-11-01 18:07:25 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:08:56 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:10:51 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+=( link_to "<button class="btn btn-light">Academic Calendar<
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+"<button class="btn btn-light">Academic Calendar</button>".h
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:19: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+keley.edu/academic-calendar/",
+                              ^):
+  app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/static/index.html.erb:19: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (164.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:11:09 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+=( link_to "<button class="btn btn-light">Academic Calendar<
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+"<button class="btn btn-light">Academic Calendar</button>".h
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:19: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+keley.edu/academic-calendar/",
+                              ^):
+  app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/static/index.html.erb:19: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (85.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (83.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (177.6ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:11:32 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+=( link_to "<button class="btn btn-light">Academic Calendar<
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+"<button class="btn btn-light">Academic Calendar</button>".h
+                              ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/static/index.html.erb:18: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+keley.edu/academic-calendar/", class: "col-md-3 offset-md-3"
+                              ^):
+  app/views/static/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/static/index.html.erb:18: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/static/index.html.erb:18: syntax error, unexpected ',', expecting &. or :: or '[' or '.'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (161.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:11:49 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:11:59 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:12:20 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:12:26 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:13:12 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds.self-dcf226d4b9ba4b8058e08647d9e292773e857c652fdeb132f0c56e0684d381cf.css?body=1" for ::1 at 2019-11-01 18:13:12 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:13:36 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:14:04 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-82069dd14e8c99304f0601c24c77456987fe5e99731d799fd43ebeeeb2b26f57.css?body=1" for ::1 at 2019-11-01 18:14:04 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:14:06 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:14:34 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-9d586c183c82ab52f54a04bd59a530e285be7b55d16173d03392d3de9a2aa6a4.css?body=1" for ::1 at 2019-11-01 18:14:35 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:14:58 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-dc4c3620b40fb5ffcbe0aba783f05c8a78a8b9835d510e3410f77ff75554a225.css?body=1" for ::1 at 2019-11-01 18:14:58 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:06 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:15 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-96a5820464a12b71c0d8842a88990aebec21b07b40840a671ffd99f94276320a.css?body=1" for ::1 at 2019-11-01 18:15:15 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:20 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-15d210f71771a1fe2d4d7a86bb43f5a437e054060c6a16321c26f95e08033094.css?body=1" for ::1 at 2019-11-01 18:15:20 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:33 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-e007f27818380f49840c3b9ddbd3169191f1da002ffaf74186765e0dab84ffe4.css?body=1" for ::1 at 2019-11-01 18:15:33 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:47 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/static.self-5a3ed05fe3e106f7def2b2c49675e264f7aba00311658d9560aa8ca67089409e.css?body=1" for ::1 at 2019-11-01 18:15:47 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:15:51 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/static.self-adc7a6d21b75152dee99583502f94552980c373c33071c5a393c708bd3670831.css?body=1" for ::1 at 2019-11-01 18:15:51 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:16:21 -0700
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/sessions" for ::1 at 2019-11-01 18:16:28 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"R8qLTmmwi+JLBXa8izOtrCwzmuONcNxRtbhBbLqZ6xgnDhEt9te5HAnWLWSWegPGMGfKyk60YgmEy8y0KnfGuQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:16:28 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/static_controller.rb:9:in `set_current_user'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (156.8ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:16:52 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:16:56 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-11-01 18:17:00 -0700
+
+
+Started GET "/auth/google_oauth2" for ::1 at 2019-11-01 18:17:00 -0700
+
+
+Started GET "/auth/google_oauth2/callback?state=5e367d197f7f02ad8ba438d04c77d83d3d77c7da4a025d1a&code=4/swEkuhil0nUfsiJ9AaZaSA9ltT0W6EAZrPW9RwMzIzsBofl6XwbJukp0oZ6odxjjGa-F1pUFwj9cnkCCiKYw26Y&scope=email%20profile%20https://www.googleapis.com/auth/userinfo.profile%20https://www.googleapis.com/auth/userinfo.email&authuser=1&hd=berkeley.edu&session_state=1ff4f7f34ac62395feae1bb32f0e84e5e714731e..c60c&prompt=none" for ::1 at 2019-11-01 18:17:03 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"state"=>"5e367d197f7f02ad8ba438d04c77d83d3d77c7da4a025d1a", "code"=>"4/swEkuhil0nUfsiJ9AaZaSA9ltT0W6EAZrPW9RwMzIzsBofl6XwbJukp0oZ6odxjjGa-F1pUFwj9cnkCCiKYw26Y", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"1", "hd"=>"berkeley.edu", "session_state"=>"1ff4f7f34ac62395feae1bb32f0e84e5e714731e..c60c", "prompt"=>"none", "provider"=>"google_oauth2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "cpyles@berkeley.edu"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:17:04 -0700
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/sessions" for ::1 at 2019-11-01 18:17:24 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EvBPkfY2VYT94fV3ZHNRw3+nC8qNwmBmEy5PPNyulMVyNNXyaVFner8yrq95Ov+pY/Nb404G3j4iXcLkTEC5ZA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:17:24 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:17:26 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAdminAndAuthToUser (20191102011835)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "admin" boolean[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "auth_user" boolean
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191102011835"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "auth_user" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["auth_user", "t"], ["updated_at", "2019-11-02 01:19:02.217479"], ["id", 1]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "admin" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["admin", "t"], ["updated_at", "2019-11-02 01:19:07.950672"], ["id", 1]]
+  [1m[35m (6.4ms)[0m  commit transaction
+
+
+Started GET "/" for ::1 at 2019-11-01 18:19:15 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 18:22:11 -0700
+Processing by StaticController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/application_controller.rb:8:in `set_current_user'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.5ms)
+
+
+Started PUT "/__web_console/repl_sessions/d0bcac859bbe4a3276db140ecb362b3f" for ::1 at 2019-11-01 18:22:21 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 18:22:37 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)

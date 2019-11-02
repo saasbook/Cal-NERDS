@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     @auth = env["omniauth.auth"]
     @user = User.from_omniauth(@auth)
     session[:user_id] = @user.id
-    redirect_to users_path
+    redirect_to root_path, notice: "Logged In"
   end
 
   def destroy

@@ -2,5 +2,24 @@
 <p>Find me in app/views/static/index.html.erb</p> -->
 
 <header>
-	<%= image_tag("cal-nerds.png", :alt => "Cal NERDS", width: "100%") %>
+	<table>
+		<tr>
+			<td id="logo">
+				<%= image_tag("cal-nerds.png", :alt => "Cal NERDS", width: "100%") %>
+			</td>
+		</tr>
+		<tr>
+			<td id="index-header">Student Director Scheduling Tool</td>
+		</tr>
+	</table>
 </header>
+
+
+<%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/", class: "col-md-3 offset-md-3"
+%>
+
+<% if !@current_user.nil? %>
+
+	<%= link_to "<button class=\"btn btn-light mx-auto\">View My Schedules</button>".html_safe, user_schedules_path(@current_user), class: "col-md-3 offset-md-1" %>
+
+<% end %>
