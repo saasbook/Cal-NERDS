@@ -1,3 +1,6 @@
+Given /^I am logged in as a student director$/ do 
+end
+
 When /^I select the following times:$/ do |table|
     puts 'success'
 end
