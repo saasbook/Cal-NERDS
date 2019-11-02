@@ -7266,3 +7266,10 @@ Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-01 17:29:04 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 17:33:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (176.8ms)
+Completed 200 OK in 245ms (Views: 238.7ms | ActiveRecord: 0.0ms)
