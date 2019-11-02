@@ -18,7 +18,7 @@ class Schedule < ActiveRecord::Base
 		return times
 	end
 
-	def time_to_string s
+	def self.time_to_string s
 		res = s[0] + s[1] + s[3] + s[4]
 		res = res.to_i
 		if s[-2] == "P" && !(res == 1200 || res == 1230)
@@ -32,22 +32,22 @@ class Schedule < ActiveRecord::Base
 		res.to_s
 	end
 
-	def group_weekday array_of_arrays
-		weekdays = Hash["mon_times", "", "tue_times", "", "wed_times", "", "thu_times", "", "fri_times", ""]
+	def self.group_weekday array_of_arrays
+		weekdays = {"mon_times" => "", "tue_times" => "", "wed_times" => "", "thu_times" => "", "fri_times" => ""}
 		for one in array_of_arrays do
-			key = abbrev_to_schemakey(one(0))
-			time = time_to_string(one(1))
+			key = Schedule.abbrev_to_schemakey(one[0])
+			time = Schedule.time_to_string(one[1])
 			weekdays[key] = weekdays[key] + time + " "
 		end
 
 		weekdays.each do |k, v|
 			weekdays[k].strip!
 		end
-		
+
 		return weekdays
 	end
 
-	def abbrev_to_schemakey abb
+	def self.abbrev_to_schemakey abb
 		if (abb == "M")
 			"mon_times"
 		elsif (abb == "T")

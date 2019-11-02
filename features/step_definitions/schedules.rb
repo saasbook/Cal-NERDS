@@ -1,7 +1,7 @@
 Given /^I am logged in as a student director$/ do
 end
 
-Given /I have( created)* a schedule with the following times:/ do |schedule_table|
+Given /I have( created)? a schedule with the following times:/ do |schedule_table|
     table = schedule_table.rows
     Schedule.create(group_weekday(table))
 
