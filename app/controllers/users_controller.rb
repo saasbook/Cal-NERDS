@@ -71,7 +71,9 @@ class UsersController < ApplicationController
 
     def check_user_permissions
       if @current_user.nil?
-        redirect_to root_path
+        redirect_to root_path, notice: "You are not logged in."
+      elsif !@current_user.auth_user || (!params[:user_id].nil? && !@current_user.admin && @current_user.id != params[:user_id])
+        reirect_to root_path, notice: "You are not authorized to access this page."
       end
     end
 
