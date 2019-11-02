@@ -7193,3 +7193,76 @@ Started GET "/dashboard/index" for ::1 at 2019-10-25 13:34:54 -0700
 Processing by DashboardController#index as HTML
   Rendered dashboard/index.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:15:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (17.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (275.6ms)
+Completed 200 OK in 358ms (Views: 350.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/scaffolds.self-a6f5eee4e90cbcb6350336e876a27cdf24896ebcd100d0e681c84028410b53d7.css?body=1" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/assets/cal-nerds-fcf66eacd9cd02e31a0e7e1707d6bda570c98df026aadc61e0b4c43335ca8fe7.jpg" for ::1 at 2019-11-01 17:16:00 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 17:25:10 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 176ms (Views: 175.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cal-nerds-03941d70bbfe06bc103bca12554c429e9351c90f13d6ccd71840a997266cc3ef.png" for ::1 at 2019-11-01 17:25:10 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 17:25:22 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:25:31 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:25:43 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-11-01 17:27:35 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cal-nerds-023c9ad257ceb50260934a0fd3051802b09127feb62f2cb8761e7d58531dbf3f.png" for ::1 at 2019-11-01 17:27:35 -0700
+
+
+Started GET "/" for ::1 at 2019-11-01 17:29:04 -0700
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-01 17:29:04 -0700
