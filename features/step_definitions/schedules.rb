@@ -5,7 +5,7 @@ When /^I select the following times:$/ do |table|
     puts 'success'
 end
 
-Then /^I should have another schedule$/ do 
+Then /^I should have another schedule$/ do
 end
 
 Then /^it should have the correct times$/ do
