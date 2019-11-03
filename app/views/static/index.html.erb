@@ -20,7 +20,7 @@
 <%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/", class: "col-md-3 offset-md-3"
 %>
 
-<% if !@current_user.nil? %>
+<% if !@current_user.nil? && @current_user.auth %>
 
 	<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user), class: "col-md-3 offset-md-1" %>
 

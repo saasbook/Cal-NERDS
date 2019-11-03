@@ -8,8 +8,18 @@ end
 
 Given /^I am logged in as (\w+)$/ do |name|
 	user = User.where(name: name)[0]
-	ApplicationController.set_current_user user.id
-	# visit "/auth/google_oauth2"
+	OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+		:provider => "google_oauth2",
+		:uid => "12345",
+		:info => OmniAuth::AuthHash::InfoHash.new({
+			:name => user.name,
+			:email => user.email
+	 	})
+	})
+	
+	# ApplicationController.set_current_user user.id
+	visit "/"
+	click_link "Log In with Google"
 	# steps %{When I follow "Log In with Google"}
 end
 

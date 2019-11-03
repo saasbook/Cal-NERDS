@@ -15,6 +15,7 @@ module NavigationHelpers
 
     when /^the (Cal NERDS )?home\s?page$/ then '/'
     when /^"\/"/ then '/'
+    when /^"\/users\/2\/schedules"/ then "/users/2/schedules"
     #   director = Movie.where(title: movie)[0].director
     #   "/directors/index?director=#{director}"
     # end

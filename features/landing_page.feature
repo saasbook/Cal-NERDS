@@ -11,39 +11,36 @@ Background: Create users
 
 Scenario: See the correct links on the landing page as student director
 	Given I am logged in as Amy
-	And I am on "/"
 	Then I should see "Hello, Amy."
 	And I should see "View My Schedules"
-	And I should see "Academic Guide"
+	And I should see "Academic Calendar"
 	And I should not see "View Users"
 
 Scenario: See the correct links on the landing page as admin
 	Given I am logged in as Chris
-	And I am on "/"
 	Then I should see "Hello, Chris."
 	And I should see "View My Schedules"
-	And I should see "Academic Guide"
+	And I should see "Academic Calendar"
 	And I should see "View Users"
 
 Scenario: Link to my schedules
 	Given I am logged in as Amy
-	And I am on "/"
 	And I follow "View My Schedules"
 	Then I should be on "/users/2/schedules"
 
 Scenario: Log out and links disappear
 	Given I am logged in as Amy
-	And I am on "/"
 	When I follow "Log Out"
 	Then I should be on "/"
+	And I should see "Academic Calendar"
 	And I should not see "Hello, Amy."
 	And I should not see "View My Schedules"
 	And I should not see "View Users"
 
 Scenario: Logged in as an unauthorized user
 	Given I am logged in as Noah
-	And I am on "/"
 	Then I should see "Hello, Noah."
+	And I should see "Academic Calendar"
 	And I should not see "View My Schedules"
 	And I should not see "View Users"
 
