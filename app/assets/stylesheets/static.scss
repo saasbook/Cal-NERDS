@@ -12,3 +12,12 @@ td#index-header {
 a.col-md-3 button {
 	font-size: 20px !important;
 }
+
+table#user-buttons {
+	width: 100%;
+	table-layout: fixed;
+}
+
+table#user-buttons td {
+	text-align: center;
+}

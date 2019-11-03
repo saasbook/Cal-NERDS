@@ -16,18 +16,26 @@
 
 <h1>PHOTOS PLACEHOLDER</h1>
 
+<table id="user-buttons"><tr>
 
-<%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/", class: "col-md-3 offset-md-3"
-%>
+	<td>
+		<%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/" %>
+	</td>
 
-<% if !@current_user.nil? && @current_user.auth %>
+	<% if !@current_user.nil? && @current_user.auth %>
 
-	<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user), class: "col-md-3 offset-md-1" %>
+		<td>
+			<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user) %>
+		</td>
 
-	<% if @current_user.admin %>
+		<% if @current_user.admin %>
 
-		<%= link_to "<button class=\"btn btn-light\">View Users</button>".html_safe, users_path, class: "col-md-3" %>
+			<td>
+				<%= link_to "<button class=\"btn btn-light\">View Users</button>".html_safe, users_path %>
+			</td>
+
+		<% end %>
 
 	<% end %>
 
-<% end %>
+</tr></table>
