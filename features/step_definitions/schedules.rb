@@ -3,6 +3,10 @@ Given /I am logged in as a student director/ do
     puts 'TODO'
 end
 
+Given /I go to the schedule page/ do
+    puts 'TODO'
+end
+
 Given /I have created a schedule with the following times:/ do |schedule_table|
     table = schedule_table.rows
     sched_params = Schedule.group_weekday(table)
@@ -12,14 +16,22 @@ end
 
 When /I select the following times:/ do |schedule_table|
     table = schedule_table.rows
-    # Toggle 
+    # select
     puts 'TODO'
 end
 
-When /I submit the schedule:/ do
+When /I update the schedule with the following:/ do |schedule_table|
+    table = schedule_table.rows
+    # Toggle
+    puts 'TODO'
+end
+
+When /I submit the schedule/ do
     # Press button
     puts 'TODO'
 end
+
+
 
 Then /^I should have the following schedule:$/ do |schedule_table|
     user_schedule = Schedule.where(user_id: @user_id).first

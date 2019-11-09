@@ -14,8 +14,7 @@ Scenario: Create a schedule
     | M    | 12:30 PM |
     | W    | 11:00 AM |
     | R    | 04:00 PM |
-    And I submit the schedule
-    # TODO: remove below step
+    And I submit the schedule # TODO: remove below step
     Given I have created a schedule with the following times:
     | day  | time     |
     | M    | 11:00 AM |
@@ -36,8 +35,7 @@ Scenario: Create a schedule
 Scenario: Create an empty schedule
     When I select the following times:
     | day | time |
-    And I submit the schedule
-    # TODO: remove below step
+    And I submit the schedule # TODO: remove below step
     Then I have created a schedule with the following times:
     | day | time |
     And I should have the following schedule:
@@ -52,7 +50,7 @@ Scenario: Update an existing schedule
     | M    | 12:30 PM |
     | W    | 11:00 AM |
     | R    | 04:00 PM |
-    When I update the schedule:  # this will toggle each of the below, so M 11 AM will be removed
+    When I update the schedule with the following:  # this will toggle each of the below, so M 11 AM will be removed
     | day  | time     |
     | M    | 11:00 AM |
     | F    | 1:00 PM  |
@@ -78,7 +76,7 @@ Scenario: Remove all times from a schedule
     | R    | 04:00 PM  |
     | R    | 04:30 PM  |
     | F    | 01:00 PM  |
-    When I update the schedule:
+    When I update the schedule with the following:
     | day  | time     |
     | M    | 11:30 AM |
     | M    | 12:00 PM |
