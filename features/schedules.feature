@@ -21,12 +21,21 @@ Scenario: Create a schedule
     | M    | 12:30 PM |
     | W    | 11:00 AM |
     | R    | 04:00 PM |
-    And it should have the correct times
+    And I should have the following schedule:
+    | day  | time     |
+    | M    | 11:00 AM |
+    | M    | 11:30 AM |
+    | M    | 12:00 PM |
+    | M    | 12:30 PM |
+    | W    | 11:00 AM |
+    | R    | 04:00 PM |
 
 Scenario: Create an empty schedule
     When I select the following times:
     | day | time |
     Then I have created a schedule with the following times:
+    | day | time |
+    And the user should have the following schedule:
     | day | time |
 
 Scenario: Update an existing schedule
@@ -43,7 +52,7 @@ Scenario: Update an existing schedule
     | M    | 11:00 AM |
     | F    | 1:00 PM  |
     | R    | 04:30 PM  |
-    Then my schedule should have the following times:
+    Then I should have the following schedule:
     | day  | time     |
     | M    | 11:30 AM |
     | M    | 12:00 PM |
@@ -72,5 +81,5 @@ Scenario: Remove all times from a schedule
     | R    | 04:00 PM  |
     | R    | 04:30 PM  |
     | F    | 01:00 PM  |
-    Then my schedule should have the following times:
+    Then I should have the following schedule:
     | day  | time     |

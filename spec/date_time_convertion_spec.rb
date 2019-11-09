@@ -70,8 +70,11 @@ RSpec.describe "convert date_time" do
     expect(Schedule.group_weekday(arr1)).to eq(ans1)
   end
   
-  it "only takes 30 min intervals" do
+  it "takes valid parameters" do
     #TODO
+    # 30 minute intervals
+    
+    # Valid weekdays
   end
   
   it "group_weekday works?" do
