@@ -18,22 +18,32 @@ class Schedule < ActiveRecord::Base
 		return times
 	end
 
+	def self.int_to_4_digit_str i
+		return "%04d" % i
+	end
+	
 	def self.time_to_string s
-		res = s[0] + s[1] + s[3] + s[4]
-		res = res.to_i
-		if s[-2] == "P" && !(res == 1200 || res == 1230)
-			res += 1200
-		end
 		if s == "12:00 AM"
 			return "0000"
 		elsif s == "12:30 AM"
 			return "0030"
 		end
-		res.to_s
+		
+		result = s[0] + s[1] + s[3] + s[4]
+		result = result.to_i
+		if s[-2] == "P" && !(result == 1200 || result == 1230)
+			result += 1200
+		end
+		
+		Schedule.int_to_4_digit_str result
 	end
 
 	def self.group_weekday array_of_arrays
-		weekdays = {"mon_times" => "", "tue_times" => "", "wed_times" => "", "thu_times" => "", "fri_times" => ""}
+		weekdays = {"mon_times" => "", 
+					"tue_times" => "", 
+					"wed_times" => "", 
+					"thu_times" => "", 
+					"fri_times" => ""}
 		for one in array_of_arrays do
 			key = Schedule.abbrev_to_schemakey(one[0])
 			time = Schedule.time_to_string(one[1])

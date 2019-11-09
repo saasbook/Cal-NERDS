@@ -12,15 +12,22 @@ Scenario: Create a schedule
     | M    | 12:00 PM |
     | M    | 12:30 PM |
     | W    | 11:00 AM |
-    | R    | 4:00 PM |
-    Then I should have another schedule
+    | R    | 04:00 PM |
+    Given I have created a schedule with the following times:
+    | day  | time     |
+    | M    | 11:00 AM |
+    | M    | 11:30 AM |
+    | M    | 12:00 PM |
+    | M    | 12:30 PM |
+    | W    | 11:00 AM |
+    | R    | 04:00 PM |
     And it should have the correct times
 
 Scenario: Create an empty schedule
     When I select the following times:
     | day | time |
-    Then I should have another schedule
-    And it should have no times
+    Then I have created a schedule with the following times:
+    | day | time |
 
 Scenario: Update an existing schedule
     Given I have created a schedule with the following times:
@@ -30,40 +37,40 @@ Scenario: Update an existing schedule
     | M    | 12:00 PM |
     | M    | 12:30 PM |
     | W    | 11:00 AM |
-    | R    | 4:00 PM |
+    | R    | 04:00 PM |
     When I update the schedule:  # this will toggle each of the below, so M 11 AM will be removed
     | day  | time     |
     | M    | 11:00 AM |
     | F    | 1:00 PM  |
-    | R    | 4:30 PM  |
+    | R    | 04:30 PM  |
     Then my schedule should have the following times:
     | day  | time     |
     | M    | 11:30 AM |
     | M    | 12:00 PM |
     | M    | 12:30 PM |
     | W    | 11:00 AM |
-    | R    | 4:00 PM  |
-    | R    | 4:30 PM  |
-    | F    | 1:00 PM  |
+    | R    | 04:00 PM  |
+    | R    | 04:30 PM  |
+    | F    | 01:00 PM  |
 
 Scenario: Remove all times from a schedule
-    Given I have a schedule with the following times:
+    Given I have created a schedule with the following times:
     | day  | time     |
     | M    | 11:30 AM |
     | M    | 12:00 PM |
     | M    | 12:30 PM |
     | W    | 11:00 AM |
-    | R    | 4:00 PM  |
-    | R    | 4:30 PM  |
-    | F    | 1:00 PM  |
+    | R    | 04:00 PM  |
+    | R    | 04:30 PM  |
+    | F    | 01:00 PM  |
     When I update the schedule:
     | day  | time     |
     | M    | 11:30 AM |
     | M    | 12:00 PM |
     | M    | 12:30 PM |
     | W    | 11:00 AM |
-    | R    | 4:00 PM  |
-    | R    | 4:30 PM  |
-    | F    | 1:00 PM  |
+    | R    | 04:00 PM  |
+    | R    | 04:30 PM  |
+    | F    | 01:00 PM  |
     Then my schedule should have the following times:
     | day  | time     |

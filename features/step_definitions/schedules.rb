@@ -4,7 +4,6 @@ end
 Given /I have created a schedule with the following times:/ do |schedule_table|
     table = schedule_table.rows
     Schedule.create(Schedule.group_weekday(table))
-
 end
 
 When /^I select the following times:$/ do |table|
