@@ -38,6 +38,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3', '1.3.11'
+  gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
 end
 
 group :development do
@@ -50,6 +51,7 @@ end
 
 group :production do
 	gem 'pg', '~> 0.21'
+  gem 'rails_12factor'  # Heroku-specific production settings
 end
 
 group :test do
@@ -57,5 +59,10 @@ group :test do
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   gem 'capybara-screenshot'
-  gem 'simplecov'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails-training-wheels' # basic imperative step defs
+  gem 'factory_girl_rails' # if using FactoryGirl
+  gem 'metric_fu'        # collect code metrics
 end
