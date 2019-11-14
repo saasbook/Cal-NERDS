@@ -15,14 +15,17 @@ Given /I have created a schedule with the following times:/ do |schedule_table|
 end
 
 When /I select the following times:/ do |schedule_table|
-    table = schedule_table.rows
+    table = schedule_table.hashes
+
     # select
+
     puts 'TODO'
 end
 
 When /I update the schedule with the following:/ do |schedule_table|
     table = schedule_table.rows
     # Toggle
+    
     puts 'TODO'
 end
 

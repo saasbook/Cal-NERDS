@@ -7,30 +7,30 @@ Background: Logged in as Student Director
 
 Scenario: Create a schedule
     Given I select the following times:
-    | day  | time     |
-    | M    | 11:00 AM |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM |
+    | day    | time |
+    | mon    | 1100 |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600|
     And I submit the schedule # TODO: remove below step
     Given I have created a schedule with the following times:
-    | day  | time     |
-    | M    | 11:00 AM |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM |
+    | day    | time |
+    | mon    | 1100 |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
     And I should have the following schedule:
-    | day  | time     |
-    | M    | 11:00 AM |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM |
+    | day    | time |
+    | mon    | 1100 |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
 
 Scenario: Create an empty schedule
     When I select the following times:
@@ -43,48 +43,49 @@ Scenario: Create an empty schedule
 
 Scenario: Update an existing schedule
     Given I have created a schedule with the following times:
-    | day  | time     |
-    | M    | 11:00 AM |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM |
+    | day    | time |
+    | day    | time |
+    | mon    | 1100 |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
     When I update the schedule with the following:  # this will toggle each of the below, so M 11 AM will be removed
-    | day  | time     |
-    | M    | 11:00 AM |
-    | F    | 1:00 PM  |
-    | R    | 04:30 PM  |
+    | day    | time |
+    | mon    | 1100 |
+    | fri    | 1300 |
+    | thu    | 1630 |
     And I submit the schedule
     Then I should have the following schedule:
-    | day  | time     |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM  |
-    | R    | 04:30 PM  |
-    | F    | 01:00 PM  |
+    | day    | time |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
+    | thu    | 1630 |
+    | fri    | 1300 |
 
 Scenario: Remove all times from a schedule
     Given I have created a schedule with the following times:
-    | day  | time     |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM  |
-    | R    | 04:30 PM  |
-    | F    | 01:00 PM  |
+    | day    | time |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
+    | thu    | 1630 |
+    | fri    | 1300 |
     When I update the schedule with the following:
-    | day  | time     |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 04:00 PM  |
-    | R    | 04:30 PM  |
-    | F    | 01:00 PM  |
+    | day    | time |
+    | mon    | 1130 |
+    | mon    | 1200 |
+    | mon    | 1230 |
+    | wed    | 1100 |
+    | thu    | 1600 |
+    | thu    | 1630 |
+    | fri    | 1300 |
     And I submit the schedule
     Then I should have the following schedule:
     | day  | time     |
