@@ -8,7 +8,7 @@ class Schedule < ActiveRecord::Base
 		for day in ["mon", "tue", "wed", "thu", "fri"]
 			sym = "#{day}_times".to_sym
 			times_string = schedule.send sym
-			if !times_string.nil?
+			if !times_string.nil? && times_string.length != 0
 				day_times = JSON.parse times_string
 				times[day.to_sym] = day_times
 			else

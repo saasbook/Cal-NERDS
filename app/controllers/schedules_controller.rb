@@ -1,11 +1,10 @@
 class SchedulesController < ApplicationController
-  before_action :set_current_user
-  before_action :set_user, :set_schedule, only: [:show, :edit, :update, :destroy]
+  before_action :set_current_user, :set_user
+  before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
   # GET /schedules
   # GET /schedules.json
   def index
-    @user = User.find(params[:user_id])
     @schedules = Schedule.all
   end
 
@@ -86,7 +85,7 @@ class SchedulesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def schedule_params
-      params.permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [], 
+      params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [], 
         :thu_times => [], :fri_times => [])
     end
 end

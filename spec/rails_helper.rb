@@ -1,5 +1,4 @@
 require 'simplecov'
-SimpleCov.start
 
 require 'omniauth-google-oauth2'
 OmniAuth.config.test_mode = true
