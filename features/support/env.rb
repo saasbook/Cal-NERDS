@@ -14,6 +14,11 @@ Capybara.save_path = "./tmp/failures"
 OmniAuth.config.test_mode = true
 
 
+# host stuff
+# default_url_options[:host] = 'localhost:300'
+Capybara.app_host = 'http://localhost:3000'
+
+
 # frozen_string_literal: true
 
 # Capybara defaults to CSS3 selectors rather than XPath.

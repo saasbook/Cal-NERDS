@@ -131,9 +131,9 @@ RSpec.describe UsersController, type: :controller do
 			expect(User.find(2).name).to eq("Jane Doe")
 		end
 
-		it 'should redict to the user page' do
+		it 'should redict to the users index page' do
 			post :create, {user: {name: "Jane Doe", email: "jdoe2@berkeley.edu"}}
-			expect(response).to redirect_to(assigns(:user))
+			expect(response).to redirect_to(users_path)
 		end
 
 		it 'should render the new template if unsuccessful' do
@@ -180,11 +180,11 @@ RSpec.describe UsersController, type: :controller do
 			patch :update, {id: 2, user: {id: 2, email: 'janedoe@berkeley.edu'}}
 		end
 
-		it 'should redirect to the user page if successful' do
+		it 'should redirect to the users index page if successful' do
 			expect(User).to receive(:find).with("2").and_return(@user2)
 			expect(@user2).to receive(:update).and_return(true)
 			patch :update, {id: 2, user: {id: 2, email: 'janedoe@berkeley.edu'}}
-			expect(response).to redirect_to(assigns(:user))
+			expect(response).to redirect_to(users_path)
 		end
 
 		it 'should render the edit template if update is not successful' do

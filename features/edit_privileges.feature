@@ -18,27 +18,24 @@ Scenario: Admin should see
 	| Noah  | false        | false         |
 	| Bette | false        | true          |
 
-Sencario: Change Noah to auth user
+Scenario: Change Noah to auth user
 	Given I am logged in as Chris
 	And I am on "/users"
 	When I check Noah's auth
-	And I follow "Update User"
-	Then Noah should be an auth user
+	And I follow Noah's "Update User"
+	Then Noah should be an auth
 
 Scenario: Change Amy to admin
 	Given I am logged in as Chris
 	And I am on "/users"
 	When I check Amy's admin
-	And I follow "Update User"
+	And I follow Amy's "Update User"
 	Then Amy should be an admin
 
 Scenario: An admin cannot un-admin themselves
 	Given I am logged in as Chris
 	And I am on "/users"
-	When I uncheck Chris's admin
-	And I follow "Update User"
-	Then I should see "Admins cannot revoke their own privileges."
-	And Chris should be an admin
+	Then I should not be able to uncheck Chris's admin
 
 Scenario: Admin && !(Auth) should not be able to edit permissions or see users
 	Given I am logged in as Bette

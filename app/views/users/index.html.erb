@@ -34,11 +34,12 @@
 
     <tr>
       <td><%= user.name %> <%= form_for user, url: {method: 'patch', action: 'update', id: user.id} do |f| %>
-        <%= f.check_box :auth, checked: user.auth %>
+        <%= f.check_box :auth, checked: user.auth, id: "auth-#{user.id}" %>
         <%= f.label :auth, "Authorized User" %>
-        <%= f.check_box :admin, checked: user.admin, disabled: user.admin && user.id == @current_user.id %>
+        <%= f.check_box :admin, checked: user.admin, disabled: user.admin && user.id == @current_user.id, 
+        id: "admin-#{user.id}" %>
         <%= f.label :admin, "Administrator" %>
-        <%= f.submit %>
+        <%= f.submit id: "#submit-#{user.id}" %>
       <% end %></td>
     </tr>
 
