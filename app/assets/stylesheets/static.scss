@@ -16,8 +16,15 @@ a.col-md-3 button {
 table#user-buttons {
 	width: 100%;
 	table-layout: fixed;
+	margin-top: 100px;
 }
 
 table#user-buttons td {
 	text-align: center;
+}
+
+img.std-dir {
+	height: 200px;
+	padding-bottom: 10px;
+	height: 200px;
 }
