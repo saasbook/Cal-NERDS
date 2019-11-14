@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_current_user
+  before_action :check_user_permissions
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -68,10 +69,11 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    def set_current_user
-      @current_user ||= session[:user_id]
+    def check_user_permissions
       if @current_user.nil?
-        redirect_to root_path
+        redirect_to root_path, notice: "You are not logged in."
+      elsif !@current_user.auth_user || (!params[:user_id].nil? && !@current_user.admin && @current_user.id != params[:user_id])
+        reirect_to root_path, notice: "You are not authorized to access this page."
       end
     end
 

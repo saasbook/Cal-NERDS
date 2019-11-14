@@ -1,3 +1,23 @@
 // Place all the styles related to the static controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+td#index-header {
+	font-size: 60px;
+	text-align: center;
+	height: 100px;
+	letter-spacing: 3px;
+}
+
+a.col-md-3 button {
+	font-size: 20px !important;
+}
+
+table#user-buttons {
+	width: 100%;
+	table-layout: fixed;
+}
+
+table#user-buttons td {
+	text-align: center;
+}

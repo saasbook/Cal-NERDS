@@ -1,4 +1,5 @@
 class SchedulesController < ApplicationController
+  before_action :set_current_user
   before_action :set_user, :set_schedule, only: [:show, :edit, :update, :destroy]
 
   # GET /schedules

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.4.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.10'
 # Use SCSS for stylesheets
@@ -38,7 +38,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'sqlite3', '1.3.11'
-  gem 'rspec-rails', '~> 3.8'
+  gem 'jasmine-rails' # if you plan to use JavaScript/CoffeeScript
 end
 
 group :development do
@@ -51,10 +51,18 @@ end
 
 group :production do
 	gem 'pg', '~> 0.21'
+  gem 'rails_12factor'  # Heroku-specific production settings
 end
 
 group :test do
   gem 'cucumber-rails', require: false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
+  gem 'capybara-screenshot'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails-training-wheels' # basic imperative step defs
+  gem 'factory_girl_rails' # if using FactoryGirl
+  gem 'metric_fu'        # collect code metrics
 end

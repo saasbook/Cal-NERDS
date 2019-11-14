@@ -1,2 +1,41 @@
-<h1>Static#index</h1>
-<p>Find me in app/views/static/index.html.erb</p>
+<!-- <h1>Static#index</h1>
+<p>Find me in app/views/static/index.html.erb</p> -->
+
+<header>
+	<table>
+		<tr>
+			<td id="logo">
+				<%= image_tag("cal-nerds.png", :alt => "Cal NERDS", width: "100%") %>
+			</td>
+		</tr>
+		<tr>
+			<td id="index-header">Student Director Scheduling Tool</td>
+		</tr>
+	</table>
+</header>
+
+<h1>PHOTOS PLACEHOLDER</h1>
+
+<table id="user-buttons"><tr>
+
+	<td>
+		<%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/" %>
+	</td>
+
+	<% if !@current_user.nil? && @current_user.auth %>
+
+		<td>
+			<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user) %>
+		</td>
+
+		<% if @current_user.admin %>
+
+			<td>
+				<%= link_to "<button class=\"btn btn-light\">View Users</button>".html_safe, users_path %>
+			</td>
+
+		<% end %>
+
+	<% end %>
+
+</tr></table>

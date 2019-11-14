@@ -1,3 +1,9 @@
+require 'simplecov'
+SimpleCov.start
+
+require 'omniauth-google-oauth2'
+OmniAuth.config.test_mode = true
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
