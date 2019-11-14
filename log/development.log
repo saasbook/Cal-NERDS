@@ -8995,3 +8995,174 @@ DEPRECATION WARNING: The factory_girl gem is deprecated. Please upgrade to facto
   [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20191019014544')[0m
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20191019014647')
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 136.152.143.169 at 2019-11-14 00:43:33 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (585.1ms)
+Completed 200 OK in 665ms (Views: 658.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.self-612324b943f33ab9a5bd5f4789f6be658bbcb59eb4f4d82f269ce4af0db77618.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/schedules.self-154650a612399299e4515f73bc18445276c0866d4bab4b39e3dae2d0e84c549b.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static.self-49c26e74a18f8a522ece48e385744ffbfdf64b2c39fecfae22383f46b19bc52f.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/schedules.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 136.152.143.169 at 2019-11-14 00:43:34 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:43:44 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:43:44 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 136.152.143.169 at 2019-11-14 00:48:49 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (168.6ms)
+Completed 200 OK in 204ms (Views: 198.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:48:58 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:48:58 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 136.152.143.169 at 2019-11-14 00:49:03 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 136.152.143.169 at 2019-11-14 00:49:04 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:49:35 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 136.152.143.169 at 2019-11-14 00:49:35 +0000
+Cannot render console from 136.152.143.169! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.31.105.215 at 2019-11-14 00:53:01 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (175.1ms)
+Completed 200 OK in 224ms (Views: 213.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.31.105.215 at 2019-11-14 00:53:10 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (165.7ms)
+Completed 200 OK in 201ms (Views: 195.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 192.31.105.215 at 2019-11-14 00:55:47 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (156.6ms)
+Completed 200 OK in 193ms (Views: 186.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:55:49 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:55:49 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 192.31.105.215 at 2019-11-14 00:58:33 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  Rendered static/index.html.erb within layouts/application (164.8ms)
+Completed 200 OK in 201ms (Views: 194.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:58:36 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:58:36 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:59:15 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/auth/google_oauth2" for 192.31.105.215 at 2019-11-14 00:59:15 +0000
+Cannot render console from 192.31.105.215! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
