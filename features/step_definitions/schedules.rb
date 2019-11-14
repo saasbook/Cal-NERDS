@@ -2,7 +2,10 @@ Given /^I am logged in as a student director$/ do
 end
 
 When /^I select the following times:$/ do |table|
-    puts 'success'
+	table.hashes.each do |time|
+		input_id = time[:day] + "-" + time[:time] + "-cb"
+		check input_id
+	end
 end
 
 Then /^I should have another schedule$/ do 

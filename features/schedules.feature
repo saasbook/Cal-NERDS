@@ -7,12 +7,12 @@ Background: Logged in as Student Director
 Scenario: Create a schedule
     When I select the following times:
     | day  | time     |
-    | M    | 11:00 AM |
-    | M    | 11:30 AM |
-    | M    | 12:00 PM |
-    | M    | 12:30 PM |
-    | W    | 11:00 AM |
-    | R    | 4:00 PM |
+    | M    | 1100     |
+    | M    | 1130     |
+    | M    | 1200     |
+    | M    | 1230     |
+    | W    | 1100     |
+    | R    | 1600     |
     Then I should have another schedule
     And it should have the correct times
 
