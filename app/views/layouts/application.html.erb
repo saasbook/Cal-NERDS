@@ -18,16 +18,23 @@
 
 	<div class="container">
 
-		<% if @current_user.nil? %>
-			<div style="text-align: right;">
-				<%= link_to "Log In with Google", "/auth/google_oauth2" %>
-			</div>
-		<% else %>
-			<div style="text-align: right;">
-				Hello, <%= @current_user.name %>. 
-				<%= link_to "Log Out", sessions_path, method: :delete %>
-			</div>
-		<% end %>
+		<table id="header"><tr>
+
+			<td><%= link_to "Home", root_path %></td>
+
+			<td>
+				<% if @current_user.nil? %>
+					<div style="text-align: right;">
+						<%= link_to "Log In with Google", "/auth/google_oauth2" %>
+					</div>
+				<% else %>
+					<div style="text-align: right;">
+						Hello, <%= @current_user.name %>. 
+						<%= link_to "Log Out", sessions_path, method: :delete %>
+					</div>
+				<% end %>
+			</td>
+		</tr></table>
 
 		<% if !notice.nil? %>
 			<div class="alert alert-info" role="alert">
