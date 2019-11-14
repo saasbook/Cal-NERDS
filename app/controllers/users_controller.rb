@@ -72,13 +72,13 @@ class UsersController < ApplicationController
     def check_user_permissions
       if @current_user.nil?
         redirect_to root_path, notice: "You are not logged in."
-      elsif !@current_user.auth_user || (!params[:user_id].nil? && !@current_user.admin && @current_user.id != params[:user_id])
-        reirect_to root_path, notice: "You are not authorized to access this page."
+      elsif !@current_user.auth || (!params[:id].nil? && !@current_user.admin && @current_user.id != params[:id])
+        redirect_to root_path, notice: "You are not authorized to access this page."
       end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:state, :code, :scope, :authuser, :hd, :session_state, :prompt, :provider, :uid)
+      params.require(:user).permit(:state, :code, :scope, :authuser, :hd, :session_state, :prompt, :provider, :uid, :name, :email, :auth, :admin, :id, :user_id)
     end
 end
