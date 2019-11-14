@@ -313,6 +313,7 @@ GEM
       rainbow (~> 2.0)
       unparser (~> 0.2.2)
     regexp_parser (1.6.0)
+<<<<<<< HEAD
     require_all (2.0.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
@@ -325,6 +326,8 @@ GEM
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
       rspec-mocks (~> 3.9.0)
+=======
+>>>>>>> a48744517afae8909fba6cb28c5b23c15e6ea3ae
     rspec-core (3.9.0)
       rspec-support (~> 3.9.0)
     rspec-expectations (3.9.0)
@@ -342,9 +345,12 @@ GEM
       rspec-mocks (~> 3.9.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
+<<<<<<< HEAD
     ruby-progressbar (1.10.1)
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
+=======
+>>>>>>> a48744517afae8909fba6cb28c5b23c15e6ea3ae
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -424,8 +430,12 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg (~> 0.21)
   rails (= 4.2.10)
+<<<<<<< HEAD
   rails_12factor
   rspec-rails
+=======
+  rspec-rails (~> 3.8)
+>>>>>>> a48744517afae8909fba6cb28c5b23c15e6ea3ae
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simplecov
