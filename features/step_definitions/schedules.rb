@@ -28,6 +28,7 @@ end
 
 When /I submit the schedule/ do
     # Press button
+    click_button("Submit")
     puts 'TODO'
 end
 

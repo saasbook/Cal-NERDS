@@ -3,7 +3,7 @@ require 'json'
 class Schedule < ActiveRecord::Base
 	belongs_to :user
 	include SchedulesHelper
-	
+
 	WEEKDAYS = %w{mon tue wed thu fri}
 
 	def self.parse_times_strings schedule
@@ -22,10 +22,10 @@ class Schedule < ActiveRecord::Base
 	end
 
 	def self.group_weekday array_of_day_time
-		weekdays = {"mon_times" => "", 
-					"tue_times" => "", 
-					"wed_times" => "", 
-					"thu_times" => "", 
+		weekdays = {"mon_times" => "",
+					"tue_times" => "",
+					"wed_times" => "",
+					"thu_times" => "",
 					"fri_times" => ""}
 		for elem in array_of_day_time do
 			day = SchedulesHelper.abbrev_to_schemakey(elem[0])
@@ -36,11 +36,10 @@ class Schedule < ActiveRecord::Base
 		weekdays.each do |k, v|
 			weekdays[k].strip!
 		end
-
 		return weekdays
 	end
-	
-	def self.db_elem_to_map elem 
+
+	def self.db_elem_to_map elem
 		daytime_map = Hash.new
 		WEEKDAYS.each do |day|
 			day_time = "#{day}_times"
