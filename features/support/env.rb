@@ -15,19 +15,12 @@ Capybara.save_path = "./tmp/failures"
 
 OmniAuth.config.test_mode = true
 
-# Capybara.app_host = 'http://localhost:3000'
-
 Capybara.javascript_driver = :poltergeist
 Capybara.server = :webrick
 
 Webrat.configure do |config|
   config.mode = :rack
 end
-
-# host stuff
-# default_url_options[:host] = 'localhost:300'
-Capybara.app_host = 'http://localhost:3000'
-
 
 # frozen_string_literal: true
 
@@ -75,6 +68,10 @@ end
 #     DatabaseCleaner.strategy = :transaction
 #   end
 #
+
+Before do
+	DatabaseCleaner.clean
+end
 
 # Possible values are :truncation and :transaction
 # The :transaction strategy is faster, but might give you threading problems.

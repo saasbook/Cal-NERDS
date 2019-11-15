@@ -1,4 +1,4 @@
-Given /the following users exist/ do |users_table|
+Given /^the following users exist:$/ do |users_table|
 	users_table.hashes.each do |user|
 		User.create(user)
 	end
@@ -15,5 +15,6 @@ Given /^I am logged in as (\w+)$/ do |name|
 	 	})
 	})
 	visit "/"
+	# debugger
 	click_link "Log In with Google"
 end
