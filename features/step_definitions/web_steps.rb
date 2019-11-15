@@ -51,6 +51,9 @@ end
 
 When /^(?:|I )press "([^"]*)"$/ do |button|
   click_button(button)
+  # if button == "Create Schedule"
+  #   fail "failed"
+  # end
 end
 
 When /^(?:|I )follow "([^"]*)"$/ do |link|

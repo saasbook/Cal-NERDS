@@ -9,10 +9,20 @@ require 'simplecov'
 
 require 'cucumber/rails'
 require 'capybara-screenshot/cucumber'
+require 'capybara/poltergeist'
+require 'webrat'
 Capybara.save_path = "./tmp/failures"
 
 OmniAuth.config.test_mode = true
 
+# Capybara.app_host = 'http://localhost:3000'
+
+Capybara.javascript_driver = :poltergeist
+Capybara.server = :webrick
+
+Webrat.configure do |config|
+  config.mode = :rack
+end
 
 # frozen_string_literal: true
 
@@ -41,7 +51,7 @@ ActionController::Base.allow_rescue = false
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
-  DatabaseCleaner.strategy = :transaction
+  DatabaseCleaner.strategy = :truncation
 rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
 end

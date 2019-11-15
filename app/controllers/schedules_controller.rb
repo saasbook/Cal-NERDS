@@ -87,6 +87,16 @@ class SchedulesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     # :start_date has been taken out for testing purpose. REMEMBER to put it back in!!!!!!!!!!
     def schedule_params
+      if params[:schedule].nil?
+        params[:schedule] = {
+          mon_times: [],
+          tue_times: [],
+          wed_times: [],
+          thu_times: [],
+          fri_times: []
+        }
+      end
+      params[:schedule][:user_id] = params[:user_id]
       params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [],
         :thu_times => [], :fri_times => [])
     end

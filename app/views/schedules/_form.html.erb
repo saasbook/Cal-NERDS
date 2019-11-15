@@ -263,6 +263,8 @@
     <input type="checkbox" name="schedule[thu_times][]" value="1730" id="thu-1730-cb" class="d-none">
     <input type="checkbox" name="schedule[fri_times][]" value="1730" id="fri-1730-cb" class="d-none">
 
+    <%= f.label :start_date, "Starting Date: " %>
+    <%= f.date_select :start_date, default: (Date.today + 1.week).monday %>
 
     <%= f.submit %>
   </div>
