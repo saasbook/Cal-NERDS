@@ -65,4 +65,7 @@ group :test do
   gem 'cucumber-rails-training-wheels' # basic imperative step defs
   gem 'factory_girl_rails' # if using FactoryGirl
   gem 'metric_fu'        # collect code metrics
+  gem 'selenium-webdriver'
+  gem 'webrat'         # webrat and poltergeist for JS testing
+  gem 'poltergeist'
 end

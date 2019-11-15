@@ -12,6 +12,8 @@ class SchedulesController < ApplicationController
   # GET /schedules/1.json
   def show
     @times_hash = Schedule.parse_times_strings @schedule
+
+
   end
 
   # GET /schedules/new
@@ -28,7 +30,6 @@ class SchedulesController < ApplicationController
   # POST /schedules.json
   def create
     @schedule = Schedule.new(schedule_params)
-
     respond_to do |format|
       if @schedule.save
         format.html { redirect_to user_schedules_path, notice: 'Schedule was successfully created.' }
@@ -79,13 +80,24 @@ class SchedulesController < ApplicationController
       @schedule = Schedule.find(params[:id])
     end
 
-    def set_user 
+    def set_user
       @user = User.find(params[:user_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    # :start_date has been taken out for testing purpose. REMEMBER to put it back in!!!!!!!!!!
     def schedule_params
-      params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [], 
+      if params[:schedule].nil?
+        params[:schedule] = {
+          mon_times: [],
+          tue_times: [],
+          wed_times: [],
+          thu_times: [],
+          fri_times: []
+        }
+      end
+      params[:schedule][:user_id] = params[:user_id]
+      params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [],
         :thu_times => [], :fri_times => [])
     end
 end
