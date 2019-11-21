@@ -51,15 +51,26 @@ class Schedule < ActiveRecord::Base
 	end
 
 	def self.group_weekday array_of_day_time
-		weekdays = {:mon => [],
-					:tue => [],
-					:wed => [],
-					:thu => [],
-					:fri => []}
+		weekdays = {
+			:mon_times => [],
+			:tue_times => [],
+			:wed_times => [],
+			:thu_times => [],
+			:fri_times => [],
+			:mon_var_times => [],
+			:tue_var_times => [],
+			:wed_var_times => [],
+			:thu_var_times => [],
+			:fri_var_times => []
+		}
 		
 		for elem in array_of_day_time do
 			time = SchedulesHelper.time_to_string(elem[1])
-			weekdays[elem[0].to_sym] << time
+			if elem[2] == "true"
+				weekdays[(elem[0] + "_var_times").to_sym] << time
+			else
+				weekdays[(elem[0] + "_times").to_sym] << time
+			end
 		end
 
 		return weekdays

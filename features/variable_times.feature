@@ -15,37 +15,33 @@ Background: Logged in as Student Director
 Scenario: Student director creates a schedule with variable hours
     Given I am creating a schedule for Amy
     And I select the following times:
-    | day    | time |
-    | mon    | 1100 |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
-    And I select the following variable times:
-    | day    | time |
-    | tue    | 1100 |
-    | tue    | 1130 |
-    | tue    | 1200 |
-    | tue    | 1230 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | tue    | 1100 | true  |
+    | tue    | 1130 | true  |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
+    | tue    | 1200 | true  |
+    | tue    | 1230 | true  |
     And I press "Create Schedule"
     Then Amy should have the following schedule:
-    | day    | time |
-    | mon    | 1100 |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
-    And Amy should have the following variable schedule:
-    | day    | time |
-    | tue    | 1100 |
-    | tue    | 1130 |
-    | tue    | 1200 |
-    | tue    | 1230 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
+    | tue    | 1100 | true  |
+    | tue    | 1130 | true  |
+    | tue    | 1200 | true  |
+    | tue    | 1230 | true  |
 
 Scenario: Update an existing schedule
-    Given I have created a variable schedule with the following times for Amy:
+    Given I have created a schedule with the following times for Amy:
     | day    | time | var   |
     | mon    | 1100 | true  |
     | mon    | 1130 | true  |
@@ -53,14 +49,14 @@ Scenario: Update an existing schedule
     | mon    | 1230 | false |
     | wed    | 1100 | false |
     | thu    | 1600 | true  |
-    When I update Amy's variable schedule with the following:
+    When I update Amy's schedule with the following:
     | day    | time | var   |
     | mon    | 1100 | true  |
     | mon    | 1130 | false |
     | fri    | 1300 | true  |
     | thu    | 1630 | false |
     And I press "Update Schedule"
-    Then Amy should have the following variable schedule:
+    Then Amy should have the following schedule:
     | day    | time | var   |
     | mon    | 1130 | false |
     | mon    | 1200 | false |

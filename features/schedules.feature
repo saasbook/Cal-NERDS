@@ -15,75 +15,75 @@ Background: Logged in as Student Director
 Scenario: Create a schedule
     Given I am creating a schedule for Amy
     And I select the following times:
-    | day    | time |
-    | mon    | 1100 |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
     And I press "Create Schedule"
     Then Amy should have the following schedule:
-    | day    | time |
-    | mon    | 1100 |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
 
 Scenario: Create an empty schedule
     Given I am creating a schedule for Amy
     And I select the following times:
-    | day | time |
+    | day    | time | var   |
     And I press "Create Schedule"
     Then Amy should have the following schedule:
-    | day | time |
+    | day    | time | var   |
 
 Scenario: Update an existing schedule
     Given I have created a schedule with the following times for Amy:
-    | day    | time |
-    | mon    | 1100 |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
     When I update Amy's schedule with the following:
-    | day    | time |
-    | mon    | 1100 |
-    | fri    | 1300 |
-    | thu    | 1630 |
+    | day    | time | var   |
+    | mon    | 1100 | false |
+    | fri    | 1300 | false |
+    | thu    | 1630 | false |
     And I press "Update Schedule"
     Then Amy should have the following schedule:
-    | day    | time |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
-    | thu    | 1630 |
-    | fri    | 1300 |
+    | day    | time | var   |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
+    | thu    | 1630 | false |
+    | fri    | 1300 | false |
 
 Scenario: Remove all times from a schedule
     Given I have created a schedule with the following times for Amy:
-    | day    | time |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
-    | thu    | 1630 |
-    | fri    | 1300 |
+    | day    | time | var   |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
+    | thu    | 1630 | false |
+    | fri    | 1300 | false |
     When I update Amy's schedule with the following:
-    | day    | time |
-    | mon    | 1130 |
-    | mon    | 1200 |
-    | mon    | 1230 |
-    | wed    | 1100 |
-    | thu    | 1600 |
-    | thu    | 1630 |
-    | fri    | 1300 |
+    | day    | time | var   |
+    | mon    | 1130 | false |
+    | mon    | 1200 | false |
+    | mon    | 1230 | false |
+    | wed    | 1100 | false |
+    | thu    | 1600 | false |
+    | thu    | 1630 | false |
+    | fri    | 1300 | false |
     And I press "Update Schedule"
     Then Amy should have the following schedule:
-    | day  | time     |
+    | day  | time     | var   |
