@@ -14456,3 +14456,5 @@ Processing by SchedulesController#new as HTML
   Rendered schedules/_form.html.erb (5.9ms)
   Rendered schedules/new.html.erb within layouts/application (9.8ms)
 Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
