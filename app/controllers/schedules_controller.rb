@@ -12,8 +12,6 @@ class SchedulesController < ApplicationController
   # GET /schedules/1.json
   def show
     @times_hash = Schedule.parse_times_strings @schedule
-
-
   end
 
   # GET /schedules/new
@@ -48,9 +46,12 @@ class SchedulesController < ApplicationController
 
       this_schedule_params = schedule_params()
 
-      for day in ["mon_times", "tue_times", "wed_times", "thu_times", "fri_times"]
-        if this_schedule_params[day].nil?
-          this_schedule_params[day] = []
+      for day in ["mon", "tue", "wed", "thu", "fri"]
+        if this_schedule_params[day + "_times"].nil?
+          this_schedule_params[day + "_times"] = []
+        end
+        if this_schedule_params[day + "_var_times"].nil?
+          this_schedule_params[day + "_var_times"] = []
         end
       end
 
@@ -98,6 +99,7 @@ class SchedulesController < ApplicationController
       end
       params[:schedule][:user_id] = params[:user_id]
       params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [],
-        :thu_times => [], :fri_times => [])
+        :thu_times => [], :fri_times => [], :mon_var_times => [], :tue_var_times => [], :wed_var_times => [],
+        :thu_var_times => [], :fri_var_times => [])
     end
 end
