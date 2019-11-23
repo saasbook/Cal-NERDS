@@ -68,4 +68,5 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webrat'         # webrat and poltergeist for JS testing
   gem 'poltergeist'
+  gem 'rack_session_access'
 end

@@ -1,5 +1,6 @@
 class SchedulesController < ApplicationController
   before_action :set_current_user, :set_user
+  before_action :check_user_permissions
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
   # GET /schedules
@@ -82,7 +83,9 @@ class SchedulesController < ApplicationController
     end
 
     def set_user
-      @user = User.find(params[:user_id])
+      if !params[:user_id].nil?
+        @user = User.find(params[:user_id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
@@ -101,5 +104,13 @@ class SchedulesController < ApplicationController
       params.require(:schedule).permit(:user_id, :start_date, :mon_times => [], :tue_times => [], :wed_times => [],
         :thu_times => [], :fri_times => [], :mon_var_times => [], :tue_var_times => [], :wed_var_times => [],
         :thu_var_times => [], :fri_var_times => [])
+    end
+
+    def check_user_permissions
+      if !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
+        redirect_to root_path, notice: 'You are not authorized to access this page.'
+      elsif params[:user_id].nil? && !@current_user.admin
+        redirect_to root_path, notice: 'You are not authorized to access this page.'
+      end
     end
 end

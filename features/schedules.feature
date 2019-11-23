@@ -9,11 +9,12 @@ Background: Logged in as Student Director
     | Amy   | amy@berkeley.edy    | true  | false | 2  |
     | Noah  | noah@berkeley.edu   | false | false | 3  |
     | Bette | bette@berkeley.edu  | false | true  | 4  |
-    And I am logged in as Amy
-    And I am viewing the schedule page for Amy
+    # And I am logged in as Amy
+    # And I am viewing the schedule page for Amy
 
 Scenario: Create a schedule
-    Given I am creating a schedule for Amy
+    Given I am logged in as Amy
+    And I am creating a schedule for Amy
     And I select the following times:
     | day    | time | var   |
     | mon    | 1100 | false |
@@ -33,7 +34,8 @@ Scenario: Create a schedule
     | thu    | 1600 | false |
 
 Scenario: Create an empty schedule
-    Given I am creating a schedule for Amy
+    Given I am logged in as Amy
+    And I am creating a schedule for Amy
     And I select the following times:
     | day    | time | var   |
     And I press "Create Schedule"
@@ -41,7 +43,8 @@ Scenario: Create an empty schedule
     | day    | time | var   |
 
 Scenario: Update an existing schedule
-    Given I have created a schedule with the following times for Amy:
+    Given I am logged in as Amy
+    And I have created a schedule with the following times for Amy:
     | day    | time | var   |
     | mon    | 1100 | false |
     | mon    | 1130 | false |
@@ -66,7 +69,8 @@ Scenario: Update an existing schedule
     | fri    | 1300 | false |
 
 Scenario: Remove all times from a schedule
-    Given I have created a schedule with the following times for Amy:
+    Given I am logged in as Amy
+    And I have created a schedule with the following times for Amy:
     | day    | time | var   |
     | mon    | 1130 | false |
     | mon    | 1200 | false |

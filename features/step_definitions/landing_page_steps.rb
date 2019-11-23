@@ -15,6 +15,5 @@ Given /^I am logged in as (\w+)$/ do |name|
 	 	})
 	})
 	visit "/"
-	# debugger
 	click_link "Log In with Google"
 end

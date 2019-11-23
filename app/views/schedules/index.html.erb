@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Schedules for <%= @user.name %></h1>
+<h1>Listing Schedules<% if !@user.nil? %> for <%= @user.name %><% end %></h1>
 
 <table>
   <thead>
@@ -12,10 +12,10 @@
   <tbody>
     <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.user_id %></td>
-        <td><%= link_to 'Show', user_schedule_path(id: schedule.id) %></td>
-        <td><%= link_to 'Edit', edit_user_schedule_path(id: schedule.id) %></td>
-        <td><%= link_to 'Destroy', user_schedule_path(id: schedule.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= schedule.start_date.strftime("%b %-m, %Y") %></td>
+        <td><%= link_to 'Show', user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
+        <td><%= link_to 'Edit', edit_user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
+        <td><%= link_to 'Destroy', user_schedule_path(id: schedule.id, user_id: schedule.user_id, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +23,6 @@
 
 <br>
 
-<%= link_to 'New Schedule', new_user_schedule_path %>
+<% if !@user.nil? %>
+  <%= link_to 'New Schedule', new_user_schedule_path %>
+<% end %>
