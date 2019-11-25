@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191118222412) do
+ActiveRecord::Schema.define(version: 20191119222412) do
 
   create_table "schedules", force: :cascade do |t|
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.string   "user_id"
-    t.date     "start_date"
+    t.datetime "start_date"
     t.string   "mon_times"
     t.string   "tue_times"
     t.string   "wed_times"
