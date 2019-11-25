@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe SchedulesController, type: :controller do
 
 	before :each do
+		expect_any_instance_of(SchedulesController).to receive :check_user_permissions
+	end
+
+	before :each do
 		@admin = User.create(id: 1, name: 'John Doe', email: 'jdoe@berkeley.edu', auth: true, admin: true)
 		@auths = [
 			User.create(id: 2, name: 'Jane Doe', email: 'jdoe2@berkeley.edu', auth: true, admin: false),

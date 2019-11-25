@@ -269,6 +269,9 @@ GEM
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
+    rack_session_access (0.2.0)
+      builder (>= 2.0.0)
+      rack (>= 1.0.0)
     rails (4.2.10)
       actionmailer (= 4.2.10)
       actionpack (= 4.2.10)
@@ -441,6 +444,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg (~> 0.21)
   poltergeist
+  rack_session_access
   rails (= 4.2.10)
   rails_12factor
   rspec-rails
