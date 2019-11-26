@@ -1,6 +1,5 @@
 Feature: Admin schedules view
-Description: Admins should be able to look at schedule breakdowns 
-of all directors for each week
+Description: Admins should be able to look at schedule overview of all directors for each week
 
 Background: Logged in as Student Director
     Given the following users exist:
@@ -9,13 +8,14 @@ Background: Logged in as Student Director
     | Amy   | amy@berkeley.edu    | true  | false | 2  |
     | Bette | dane@berkeley.edu   | true  | false | 3  |
     And I am logged in as Chris
+    And I am on "/schedules/overview"
 
 # Helpful to have visual feedback, otherwise user may think something isn't working
-Scenario: Viewing empty schedule breakdown page
-  Given I am on the schedule breakdown page
+Scenario: Viewing empty schedule overview page
+  And there are no schedules in the database
   Then I should see "No schedules have been added."
   
-Scenario: Viewing schedule breakdown
+Scenario: Viewing schedule overview
   Given I have created a schedule with the following times for Amy:
     | day    | time |
     | mon    | 1000 |
@@ -30,7 +30,7 @@ Scenario: Viewing schedule breakdown
     | wed    | 1100 | 
     | wed    | 1200 |
     | thu    | 1000 |
-  And I am on the schedule breakdown page
+  And I am on "/schedules/overview"
   Then I should see "Amy" in the following cells:
     | day    | time |
     | mon    | 1000 |
@@ -42,10 +42,10 @@ Scenario: Viewing schedule breakdown
     | day    | time |
     | tue    | 1000 |
     | wed    | 1000 |
-    | wed    | 1100 | 
+    | wed    | 1100 |
     | wed    | 1200 |
     | thu    | 1000 |
-    | 
+
 Scenario: Page updates when schedule is changed
   Given I have created a schedule with the following times for Amy:
     | day    | time |
@@ -58,7 +58,7 @@ Scenario: Page updates when schedule is changed
     | day    | time |
     | tue    | 1000 |
     | wed    | 1000 |
-    | wed    | 1100 | 
+    | wed    | 1100 |
     | wed    | 1200 |
     | thu    | 1000 |
   When I update Amy's schedule with the following:
@@ -66,7 +66,7 @@ Scenario: Page updates when schedule is changed
     | mon    | 1000 |
     | thu    | 1630 |
     | fri    | 1300 |
-  And I am on the schedule breakdown page
+  And I am on "/schedules/overview"
   Then I should see "Amy" in the following cells:
     | day    | time |
     | tue    | 1000 |
@@ -79,6 +79,6 @@ Scenario: Page updates when schedule is changed
     | day    | time |
     | tue    | 1000 |
     | wed    | 1000 |
-    | wed    | 1100 | 
+    | wed    | 1100 |
     | wed    | 1200 |
     | thu    | 1000 |

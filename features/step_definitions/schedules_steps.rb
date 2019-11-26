@@ -1,3 +1,7 @@
+Given /^there are no schedules in the database$/ do
+    puts 'TODO'
+end
+
 Given /^I have created a schedule with the following times for (\w+):$/ do |name, schedule_table|
     sched_params = {
         "mon_times" => [],

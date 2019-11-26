@@ -7,7 +7,7 @@ class Schedule < ActiveRecord::Base
 	WEEKDAYS = %w{mon tue wed thu fri}
 
 	def self.weekdays
-		return %w{mon tue wed thu fri}
+		return WEEKDAYS
 	end
 
 	def self.times
@@ -29,7 +29,7 @@ class Schedule < ActiveRecord::Base
 
 	def self.parse_times_strings schedule
 		times = {}
-		for day in ["mon", "tue", "wed", "thu", "fri"]
+		for day in WEEKDAYS
 			sym = "#{day}_times".to_sym
 			times_string = schedule.send sym
 			if !times_string.nil? && times_string.length != 0
