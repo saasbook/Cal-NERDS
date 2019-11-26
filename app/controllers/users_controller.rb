@@ -74,6 +74,8 @@ class UsersController < ApplicationController
         redirect_to root_path, notice: "You are not logged in."
       elsif !@current_user.auth || (!params[:id].nil? && !@current_user.admin && @current_user.id != params[:id])
         redirect_to root_path, notice: "You are not authorized to access this page."
+      elsif !@current_user.admin && params[:id].nil?
+        redirect_to root_path, notice: "You are not authorized to access this page."
       end
     end
 

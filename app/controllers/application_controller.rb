@@ -5,8 +5,13 @@ class ApplicationController < ActionController::Base
 
   private
   	def set_current_user
-  		if !session[:user_id].nil?
-  			@current_user ||= User.find(session[:user_id])
-  		end
+  		begin
+  			if !session[:user_id].nil?
+		  		@current_user ||= User.find(session[:user_id])
+		  	end
+	  	rescue ActiveRecord::RecordNotFound
+	  		@current_user = nil
+	  		redirect_to root_path, notice: 'User not found.'
+	  	end
   	end
 end

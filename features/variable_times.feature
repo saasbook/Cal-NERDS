@@ -1,6 +1,6 @@
 @javascript
-Feature: Add and create schedules
-Description: Users should be able to create and update schedules
+Feature: Schedules have variable and fixed times
+Description: Users should be able to create and update schedules with variable times
 
 Background: Logged in as Student Director
     Given the following users exist:
@@ -12,7 +12,7 @@ Background: Logged in as Student Director
     # And I am logged in as Amy
     # And I am viewing the schedule page for Amy
 
-Scenario: Create a schedule
+Scenario: Student director creates a schedule with variable hours
     Given I am logged in as Amy
     And I am creating a schedule for Amy
     And I select the following times:
@@ -20,9 +20,13 @@ Scenario: Create a schedule
     | mon    | 1100 | false |
     | mon    | 1130 | false |
     | mon    | 1200 | false |
+    | tue    | 1100 | true  |
+    | tue    | 1130 | true  |
     | mon    | 1230 | false |
     | wed    | 1100 | false |
     | thu    | 1600 | false |
+    | tue    | 1200 | true  |
+    | tue    | 1230 | true  |
     And I press "Create Schedule"
     Then Amy should have the following schedule:
     | day    | time | var   |
@@ -32,30 +36,26 @@ Scenario: Create a schedule
     | mon    | 1230 | false |
     | wed    | 1100 | false |
     | thu    | 1600 | false |
-
-Scenario: Create an empty schedule
-    Given I am logged in as Amy
-    And I am creating a schedule for Amy
-    And I select the following times:
-    | day    | time | var   |
-    And I press "Create Schedule"
-    Then Amy should have the following schedule:
-    | day    | time | var   |
+    | tue    | 1100 | true  |
+    | tue    | 1130 | true  |
+    | tue    | 1200 | true  |
+    | tue    | 1230 | true  |
 
 Scenario: Update an existing schedule
     Given I am logged in as Amy
     And I have created a schedule with the following times for Amy:
     | day    | time | var   |
-    | mon    | 1100 | false |
-    | mon    | 1130 | false |
+    | mon    | 1100 | true  |
+    | mon    | 1130 | true  |
     | mon    | 1200 | false |
     | mon    | 1230 | false |
     | wed    | 1100 | false |
-    | thu    | 1600 | false |
+    | thu    | 1600 | true  |
     When I update Amy's schedule with the following:
     | day    | time | var   |
-    | mon    | 1100 | false |
-    | fri    | 1300 | false |
+    | mon    | 1100 | true  |
+    | mon    | 1130 | false |
+    | fri    | 1300 | true  |
     | thu    | 1630 | false |
     And I press "Update Schedule"
     Then Amy should have the following schedule:
@@ -64,30 +64,6 @@ Scenario: Update an existing schedule
     | mon    | 1200 | false |
     | mon    | 1230 | false |
     | wed    | 1100 | false |
-    | thu    | 1600 | false |
+    | thu    | 1600 | true  |
     | thu    | 1630 | false |
-    | fri    | 1300 | false |
-
-Scenario: Remove all times from a schedule
-    Given I am logged in as Amy
-    And I have created a schedule with the following times for Amy:
-    | day    | time | var   |
-    | mon    | 1130 | false |
-    | mon    | 1200 | false |
-    | mon    | 1230 | false |
-    | wed    | 1100 | false |
-    | thu    | 1600 | false |
-    | thu    | 1630 | false |
-    | fri    | 1300 | false |
-    When I update Amy's schedule with the following:
-    | day    | time | var   |
-    | mon    | 1130 | false |
-    | mon    | 1200 | false |
-    | mon    | 1230 | false |
-    | wed    | 1100 | false |
-    | thu    | 1600 | false |
-    | thu    | 1630 | false |
-    | fri    | 1300 | false |
-    And I press "Update Schedule"
-    Then Amy should have the following schedule:
-    | day  | time     | var   |
+    | fri    | 1300 | true  |

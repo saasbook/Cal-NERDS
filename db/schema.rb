@@ -11,18 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191102011835) do
+ActiveRecord::Schema.define(version: 20191119222412) do
 
   create_table "schedules", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "user_id"
-    t.string   "start_date"
+    t.datetime "start_date"
     t.string   "mon_times"
     t.string   "tue_times"
     t.string   "wed_times"
     t.string   "thu_times"
     t.string   "fri_times"
+    t.string   "mon_var_times"
+    t.string   "tue_var_times"
+    t.string   "wed_var_times"
+    t.string   "thu_var_times"
+    t.string   "fri_var_times"
   end
 
   create_table "users", force: :cascade do |t|

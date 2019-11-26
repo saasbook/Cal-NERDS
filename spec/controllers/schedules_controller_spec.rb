@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe SchedulesController, type: :controller do
 
 	before :each do
+		expect_any_instance_of(SchedulesController).to receive :check_user_permissions
+	end
+
+	before :each do
 		@admin = User.create(id: 1, name: 'John Doe', email: 'jdoe@berkeley.edu', auth: true, admin: true)
 		@auths = [
 			User.create(id: 2, name: 'Jane Doe', email: 'jdoe2@berkeley.edu', auth: true, admin: false),
@@ -33,11 +37,16 @@ RSpec.describe SchedulesController, type: :controller do
 			get :show, {id: 1, user_id: 2, schedule: {user_id: 2, id: 1}}
 			expect(assigns(:times_hash)).not_to be_nil
 			expect(assigns(:times_hash)).to eq({
-				mon: [1000, 1030, 1100, 1130],
-				tue: [],
-				wed: [],
-				thu: [],
-				fri: []
+				mon_times: [1000, 1030, 1100, 1130],
+				tue_times: [],
+				wed_times: [],
+				thu_times: [],
+				fri_times: [],
+				mon_var_times: [],
+				tue_var_times: [],
+				wed_var_times: [],
+				thu_var_times: [],
+				fri_var_times: []
 			})
 		end
 	end
@@ -60,11 +69,16 @@ RSpec.describe SchedulesController, type: :controller do
 			get :edit, {id: 1, user_id: 3}
 			expect(assigns(:times_hash)).not_to be_nil
 			expect(assigns(:times_hash)).to eq({
-				mon: [1000, 1030, 1100, 1130],
-				tue: [],
-				wed: [],
-				thu: [],
-				fri: []
+				mon_times: [1000, 1030, 1100, 1130],
+				tue_times: [],
+				wed_times: [],
+				thu_times: [],
+				fri_times: [],
+				mon_var_times: [],
+				tue_var_times: [],
+				wed_var_times: [],
+				thu_var_times: [],
+				fri_var_times: []
 			})
 		end
 	end

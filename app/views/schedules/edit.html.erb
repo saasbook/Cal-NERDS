@@ -3,11 +3,15 @@
 <%= render 'form' %>
 
 <script type="text/javascript">
-	
+
 	<% for day in ["mon", "tue", "wed", "thu", "fri"] %>
-    <% for time in @times_hash[day.to_sym] %>
-      $("#<%= day %>-<%= time %>").css("background", "#3B7EA1")
+    <% for time in @times_hash[(day + "_times").to_sym] %>
+      $("#<%= day %>-<%= time %>").toggleClass("not-selected").toggleClass("fixed");
       $("#" + $("#<%= day %>-<%= time %>").attr("id") + "-cb").prop("checked", true);
+    <% end %>
+    <% for time in @times_hash[(day + "_var_times").to_sym] %>
+      $("#<%= day %>-<%= time %>").toggleClass("not-selected").toggleClass("variable");
+      $("#" + $("#<%= day %>-<%= time %>").attr("id") + "-var-cb").prop("checked", true);
     <% end %>
   <% end %>
 

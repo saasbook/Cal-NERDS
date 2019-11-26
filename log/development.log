@@ -12806,3 +12806,2086 @@ Processing by SchedulesController#new as HTML
   Rendered schedules/new.html.erb within layouts/application (12.0ms)
 Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
 >>>>>>> create_and_update_sched
+
+
+Started GET "/" for ::1 at 2019-11-18 13:13:21 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (344.8ms)
+Completed 200 OK in 490ms (Views: 454.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/scaffolds.self-dcf226d4b9ba4b8058e08647d9e292773e857c652fdeb132f0c56e0684d381cf.css?body=1" for ::1 at 2019-11-18 13:13:22 -0800
+
+
+Started GET "/assets/static.self-f87c15b7e9ac454b0ce0f31657268b62dead79699df1bca52443a23ac3843e6e.css?body=1" for ::1 at 2019-11-18 13:13:22 -0800
+
+
+Started GET "/assets/application.self-cb9ba05049e68626340830fe77152bfeefec76182b12d5fba12133e6579ff052.css?body=1" for ::1 at 2019-11-18 13:13:22 -0800
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-11-18 13:13:22 -0800
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-18 13:13:22 -0800
+
+
+Started GET "/assets/directors/Ahyeon-e08c8eec72721a5953b5d9782853bf8920b423704a0b50eaa8a74bc7be9a573e.png" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Amy-ac56818f02fd62f41a83601332f99136579356d259e30c99a987178cdf7fcc58.jpg" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Ceshia-d989f36938a01de7178353df2f236398b6a3ee095aac74b94a6e6f46e91f8234.jpg" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Karla-64f84b14ea26e631414d6889e8d3d19a410cf2a973f3c91acfeea27b14717cf7.jpg" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Cindy-1fe846176cd3c00a484209100988ce158debac4585d17c8f6ad76f9f49a3836b.png" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Priyanka-e4a180d82556da5d1fd03cfa06e0eded921f1af21289a2af54ead21896ab63cc.png" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Emily-ac548b1b9ea9cad222f00eb07a9ffb9b50d2f45490f40687094a5518578fdc48.jpg" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Kseniya-ec44ff324d8f63f770aab13f231546510ecea3ccdf1399bbb204408aebe94ddc.jpg" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/assets/directors/Sofia-8bd90c207fa2506de695b512266cf7124273fe9881fb382595d8df4eb9886630.JPG" for ::1 at 2019-11-18 13:13:23 -0800
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 13:13:25 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (1.6ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 74ms (Views: 56.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:13:27 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (43.9ms)
+  Rendered schedules/new.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 129ms (Views: 119.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:24:45 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.9ms)
+  Rendered schedules/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:24:56 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (7.3ms)
+  Rendered schedules/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 106ms (Views: 101.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:24:58 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.5ms)
+  Rendered schedules/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 78ms (Views: 74.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:25:08 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (8.6ms)
+  Rendered schedules/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 120ms (Views: 113.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:25:25 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.8ms)
+  Rendered schedules/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:25:42 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.7ms)
+  Rendered schedules/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:25:49 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.8ms)
+  Rendered schedules/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:28:18 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (7.0ms)
+  Rendered schedules/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:28:32 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.5ms)
+  Rendered schedules/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:29:03 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.4ms)
+  Rendered schedules/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:29:46 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.5ms)
+  Rendered schedules/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:30:57 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.4ms)
+  Rendered schedules/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 57ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/schedules.self-1abc6fd2920dc3de86a75cf792c35a37f90ce902ff30da8489e5c680563369de.css?body=1" for ::1 at 2019-11-18 13:30:57 -0800
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:31:00 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (2.4ms)
+  Rendered schedules/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 32ms (Views: 29.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:31:28 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.6ms)
+  Rendered schedules/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 88ms (Views: 85.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:31:54 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (7.6ms)
+  Rendered schedules/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 102ms (Views: 99.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:40:51 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.6ms)
+  Rendered schedules/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/schedules.self-8568a6ef775a7822976d6ca552300cfce7a5bace20b5c5758c572d4124072818.css?body=1" for ::1 at 2019-11-18 13:40:51 -0800
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:41:03 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.4ms)
+  Rendered schedules/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:50:48 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (18.9ms)
+  Rendered schedules/new.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `<' for [3]:Array
+Did you mean?  <<):
+     9:     <th class="day-selector">Friday</th>
+    10:   </tr>
+    11: 
+    12:   <% for time in Schedule.times %>
+    13: 
+    14:     <tr>
+    15: 
+  app/models/schedule.rb:14:in `block in times'
+  app/models/schedule.rb:11:in `times'
+  app/views/schedules/_form.html.erb:12:in `_app_views_schedules__form_html_erb___2117760593154421232_70296527248040'
+  app/views/schedules/new.html.erb:3:in `_app_views_schedules_new_html_erb___2492361129732444501_70296519951420'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (94.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (185.9ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:51:07 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (36.5ms)
+  Rendered schedules/new.html.erb within layouts/application (38.6ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 1.0ms)
+
+ActionView::Template::Error (undefined method `str_to_formatted_time' for #<#<Class:0x007fde62c33ac8>:0x007fde62c1a168>):
+    13: 
+    14:     <tr>
+    15: 
+    16:       <td><%= str_to_formatted_time time%></td>
+    17:       
+    18:       <% for day in Schedule.WEEKDAYS %>      
+    19:         
+  app/views/schedules/_form.html.erb:16:in `block in _app_views_schedules__form_html_erb___2117760593154421232_70296527248040'
+  app/views/schedules/_form.html.erb:12:in `each'
+  app/views/schedules/_form.html.erb:12:in `_app_views_schedules__form_html_erb___2117760593154421232_70296527248040'
+  app/views/schedules/new.html.erb:3:in `_app_views_schedules_new_html_erb___2492361129732444501_70296519951420'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (153.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (195.6ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:51:19 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (23.4ms)
+  Rendered schedules/new.html.erb within layouts/application (25.8ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `WEEKDAYS' for #<Class:0x007fde5d364bb8>):
+    15: 
+    16:       <td><%= Schedule.str_to_formatted_time time%></td>
+    17:       
+    18:       <% for day in Schedule.WEEKDAYS %>      
+    19:         
+    20:         <td class="time-entry not-selected" id="<%= day %>-<%= time %>"></td>
+    21: 
+  app/views/schedules/_form.html.erb:18:in `block in _app_views_schedules__form_html_erb___2117760593154421232_70296520928680'
+  app/views/schedules/_form.html.erb:12:in `each'
+  app/views/schedules/_form.html.erb:12:in `_app_views_schedules__form_html_erb___2117760593154421232_70296520928680'
+  app/views/schedules/new.html.erb:3:in `_app_views_schedules_new_html_erb___2492361129732444501_70296519951420'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (132.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (116.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (257.9ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:51:50 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (8.9ms)
+  Rendered schedules/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 101ms (Views: 74.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:52:01 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.5ms)
+  Rendered schedules/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 13:53:48 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.2ms)
+  Rendered schedules/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 113ms (Views: 110.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/schedules.self-89907f7c4ee3ed57b2f261d0ce25664ea4b47f5a3500e68518056ca2dc7aa30c.css?body=1" for ::1 at 2019-11-18 13:53:48 -0800
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:00:10 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.4ms)
+  Rendered schedules/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:17:33 -0800
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.10) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/chrispyles/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /Users/chrispyles/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /Users/chrispyles/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (81.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (199.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddVarTimesToSchedules (20191118220110)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schedules" ADD "mon_var_times" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "schedules" ADD "tue_var_times" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "schedules" ADD "wed_var_times" varchar[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "schedules" ADD "thu_var_times" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "schedules" ADD "fri_var_times" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20191118220110"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:17:56 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 143ms (Views: 109.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:17:58 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (11.4ms)
+  Rendered schedules/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 101ms (Views: 89.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1/schedules" for ::1 at 2019-11-18 14:18:13 -0800
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oP81XE1EFXMEpULWoBe4UFGmuTjP8g5GNwZbZcqT6l7KdRLQke43n7Q6OaFAfeYjglzYYo8ettRK2lUXGtf2/Q==", "schedule"=>{"wed_times"=>["1030", "1200"], "mon_times"=>["1230"], "thu_var_times"=>["1130", "1300"], "wed_var_times"=>["1430"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Create Schedule", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schedules" ("user_id", "mon_times", "wed_times", "wed_var_times", "thu_var_times", "start_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "1"], ["mon_times", "[\"1230\"]"], ["wed_times", "[\"1030\", \"1200\"]"], ["wed_var_times", "[\"1430\"]"], ["thu_var_times", "[\"1130\", \"1300\"]"], ["start_date", "{1=>2019, 2=>11, 3=>25}"], ["created_at", "2019-11-18 22:18:13.607961"], ["updated_at", "2019-11-18 22:18:13.607961"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:18:13 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/1" for ::1 at 2019-11-18 14:18:16 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_schedule.html.erb (1.3ms)
+  Rendered schedules/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 94ms (Views: 90.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/schedules/1" for ::1 at 2019-11-18 14:21:50 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_schedule.html.erb (1.7ms)
+  Rendered schedules/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 64ms (Views: 31.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:22:05 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/1" for ::1 at 2019-11-18 14:22:07 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (2.5ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_schedule.html.erb (5.4ms)
+  Rendered schedules/show.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 130ms (Views: 120.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:22:09 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/1/edit" for ::1 at 2019-11-18 14:22:10 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (48.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (55.1ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `day' for "{1=>2019, 2=>11, 3=>25}":String):
+    67: 
+    68: 
+    69:     <%= f.label :start_date, "Starting Date: " %>
+    70:     <%= f.date_select :start_date, default: (Date.today + 1.week).monday %>
+    71: 
+    72:     <br>
+    73: 
+  app/views/schedules/_form.html.erb:70:in `block in _app_views_schedules__form_html_erb___2117760593154421232_70296557589200'
+  app/views/schedules/_form.html.erb:39:in `_app_views_schedules__form_html_erb___2117760593154421232_70296557589200'
+  app/views/schedules/edit.html.erb:3:in `_app_views_schedules_edit_html_erb___4587769713658662712_70296510962620'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (167.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeStartDateToDate (20191118222412)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aschedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" varchar, "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "schedules"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (1, '2019-11-18 22:18:13.607961', '2019-11-18 22:18:13.607961', '1', '{1=>2019, 2=>11, 3=>25}', '["1230"]', NULL, '["1030", "1200"]', NULL, NULL, NULL, NULL, '["1430"]', '["1130", "1300"]', NULL)[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "schedules"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" date, "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "aschedules"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (1, '2019-11-18 22:18:13.607961', '2019-11-18 22:18:13.607961', '1', '{1=>2019, 2=>11, 3=>25}', '["1230"]', NULL, '["1030", "1200"]', NULL, NULL, NULL, NULL, '["1430"]', '["1130", "1300"]', NULL)[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aschedules"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191118222412"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/users/1/schedules/1/edit" for ::1 at 2019-11-18 14:24:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.6ms)
+  Rendered schedules/edit.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 1.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     5: <script type="text/javascript">
+     6: 	
+     7: 	<% for day in ["mon", "tue", "wed", "thu", "fri"] %>
+     8:     <% for time in @times_hash[day.to_sym] %>
+     9:       $("#<%= day %>-<%= time %>").css("background", "#3B7EA1")
+    10:       $("#" + $("#<%= day %>-<%= time %>").attr("id") + "-cb").prop("checked", true);
+    11:     <% end %>
+  app/views/schedules/edit.html.erb:8:in `block in _app_views_schedules_edit_html_erb___4587769713658662712_70296510962620'
+  app/views/schedules/edit.html.erb:7:in `each'
+  app/views/schedules/edit.html.erb:7:in `_app_views_schedules_edit_html_erb___4587769713658662712_70296510962620'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (72.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (165.2ms)
+
+
+Started GET "/users/1/schedules/1/edit" for ::1 at 2019-11-18 14:26:35 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (11.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 99ms (Views: 93.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/1/schedules/1" for ::1 at 2019-11-18 14:26:43 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hLv5bkxNBzAvLFiDMEwlfhOU4waY35N3hBIHI8SN3pzuMd7ikOcl3J+zI/TQJnsNwG6CXNgzK+X5zglRFMnCPw==", "schedule"=>{"wed_times"=>["1030", "1200"], "mon_times"=>["1230"], "tue_times"=>["1630"], "thu_times"=>["1630"], "thu_var_times"=>["1130", "1300", "1500"], "wed_var_times"=>["1430", "1500"], "tue_var_times"=>["1530"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "schedules" SET "tue_times" = ?, "thu_times" = ?, "tue_var_times" = ?, "wed_var_times" = ?, "thu_var_times" = ?, "fri_times" = ?, "start_date" = ?, "updated_at" = ? WHERE "schedules"."id" = ?  [["tue_times", "[\"1630\"]"], ["thu_times", "[\"1630\"]"], ["tue_var_times", "[\"1530\"]"], ["wed_var_times", "[\"1430\", \"1500\"]"], ["thu_var_times", "[\"1130\", \"1300\", \"1500\"]"], ["fri_times", "[]"], ["start_date", "2019-11-25"], ["updated_at", "2019-11-18 22:26:43.349675"], ["id", 1]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules/1
+Completed 302 Found in 12ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1/schedules/1" for ::1 at 2019-11-18 14:26:43 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:26:54 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/1" for ::1 at 2019-11-18 14:26:55 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_schedule.html.erb (1.4ms)
+  Rendered schedules/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 137ms (Views: 129.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:27:01 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:27:03 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.6ms)
+  Rendered schedules/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 53ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:28:05 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (3.3ms)
+  Rendered schedules/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/schedules.self-178d33d3bb52feb0fc3f56cab863bc41026ef1210d0be60da2c54ce65663e02f.css?body=1" for ::1 at 2019-11-18 14:28:05 -0800
+
+
+Started POST "/users/1/schedules" for ::1 at 2019-11-18 14:28:16 -0800
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kudQh5Vhw2FAJWuJdn6ZrE5AxO7gbAtzk8gpD88yaSb4bXcLScvhjfC6EP6WFMffnbqltKCAs+HuFCd9H3Z1hQ==", "schedule"=>{"start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"29"}, "commit"=>"Create Schedule", "user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schedules" ("user_id", "start_date", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", "1"], ["start_date", "2019-11-29"], ["created_at", "2019-11-18 22:28:16.855891"], ["updated_at", "2019-11-18 22:28:16.855891"]]
+  [1m[35m (5.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 11ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:28:16 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:28:18 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.0ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:28:20 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 59ms (Views: 56.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/2/edit" for ::1 at 2019-11-18 14:28:21 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules/_form.html.erb (7.2ms)
+  Rendered schedules/edit.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 61ms (Views: 59.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:28:26 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-18 14:29:04 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 94ms (Views: 92.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/directors/Cindy-1fe846176cd3c00a484209100988ce158debac4585d17c8f6ad76f9f49a3836b.png" for ::1 at 2019-11-18 14:29:04 -0800
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:29:06 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:29:24 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (1.0ms)
+  Rendered schedules/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 79ms (Views: 75.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/2/edit" for ::1 at 2019-11-18 14:29:26 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.7ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules/_form.html.erb (31.9ms)
+  Rendered schedules/edit.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 270ms (Views: 262.7ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/users/1/schedules/2" for ::1 at 2019-11-18 14:29:31 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaEiqhWKx2tDjtkCx8LAKpEFdV7UYBoZ7IqqRJEV26FPKwUmySDlh/MRonUnqJ5ZQv8UBJSMoouRVqQ2QVHHAg==", "schedule"=>{"wed_times"=>["1200"], "mon_times"=>["1330"], "thu_times"=>["1430"], "fri_var_times"=>["1230"], "tue_var_times"=>["1430", "1700"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"29"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "schedules" SET "mon_times" = ?, "wed_times" = ?, "thu_times" = ?, "tue_var_times" = ?, "fri_var_times" = ?, "tue_times" = ?, "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?  [["mon_times", "[\"1330\"]"], ["wed_times", "[\"1200\"]"], ["thu_times", "[\"1430\"]"], ["tue_var_times", "[\"1430\", \"1700\"]"], ["fri_var_times", "[\"1230\"]"], ["tue_times", "[]"], ["fri_times", "[]"], ["updated_at", "2019-11-18 22:29:31.394576"], ["id", 2]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules/2
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:29:31 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:34:10 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (1.2ms)
+  Rendered schedules/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (Invalid CSS after "	background-color:": expected pseudoclass or pseudoelement, was " #3B7EA1"):
+    2: <html>
+    3: <head>
+    4:   <title>Cal NERDS Schedule</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/assets/stylesheets/schedules.scss:29
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2971729303805047742_70296544312740'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (162.2ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:34:17 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (1.0ms)
+  Rendered schedules/show.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error ("button.fixed-btn" failed to @extend ".btn-primary".
+The selector ".btn-primary" was not found.
+Use "@extend .btn-primary !optional" if the extend should be able to fail.
+):
+    2: <html>
+    3: <head>
+    4:   <title>Cal NERDS Schedule</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/assets/stylesheets/schedules.scss:28
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___2971729303805047742_70296544312740'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (146.5ms)
+
+
+Started GET "/users/1/schedules/2" for ::1 at 2019-11-18 14:36:14 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered schedules/_schedule.html.erb (2.6ms)
+  Rendered schedules/show.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 107ms (Views: 103.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/schedules.self-c8ede50500b1231abe1e955dcc6fe9383cf451576e5feab8e71a3902a8274e64.css?body=1" for ::1 at 2019-11-18 14:36:14 -0800
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:36:16 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.3ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:36:18 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (7.8ms)
+  Rendered schedules/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/1/schedules" for ::1 at 2019-11-18 14:36:26 -0800
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z3JsOkVLo3MFnSgqTH1YFI1RS6G5wsTHkodkJWwk5/YN+Eu2meGBn7UCU12sFwZnXqsq+/kufFXvW2pXvGD7VQ==", "schedule"=>{"mon_times"=>["1200", "1430"], "wed_times"=>["1300"], "thu_times"=>["1430"], "wed_var_times"=>["1030"], "fri_var_times"=>["1030", "1400"], "tue_var_times"=>["1530"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Create Schedule", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schedules" ("user_id", "mon_times", "wed_times", "thu_times", "tue_var_times", "wed_var_times", "fri_var_times", "start_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "1"], ["mon_times", "[\"1200\", \"1430\"]"], ["wed_times", "[\"1300\"]"], ["thu_times", "[\"1430\"]"], ["tue_var_times", "[\"1530\"]"], ["wed_var_times", "[\"1030\"]"], ["fri_var_times", "[\"1030\", \"1400\"]"], ["start_date", "2019-11-25"], ["created_at", "2019-11-18 22:36:26.071343"], ["updated_at", "2019-11-18 22:36:26.071343"]]
+  [1m[36m (8.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 17ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:36:26 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/3" for ::1 at 2019-11-18 14:36:27 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 48ms (Views: 46.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:37:36 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 31ms (Views: 29.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:37:38 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (15.6ms)
+  Rendered schedules/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 113ms (Views: 108.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:46:49 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (4.7ms)
+  Rendered schedules/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:47:43 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.6ms)
+  Rendered schedules/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/1/schedules" for ::1 at 2019-11-18 14:48:12 -0800
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LXUsmbO6oBUcer0usICi8QEMVtS+8TAfzoffXiQP80BH/wsVbxCC+azlxllQ6vyC0vY3jv4diI2zW9Es9Evv4w==", "schedule"=>{"wed_times"=>["1030", "1130", "1230"], "mon_times"=>["1130"], "thu_times"=>["1230"], "fri_var_times"=>["1130"], "thu_var_times"=>["1300"], "mon_var_times"=>["1430"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Create Schedule", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schedules" ("user_id", "mon_times", "wed_times", "thu_times", "mon_var_times", "thu_var_times", "fri_var_times", "start_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "1"], ["mon_times", "[\"1130\"]"], ["wed_times", "[\"1030\", \"1130\", \"1230\"]"], ["thu_times", "[\"1230\"]"], ["mon_var_times", "[\"1430\"]"], ["thu_var_times", "[\"1300\"]"], ["fri_var_times", "[\"1130\"]"], ["start_date", "2019-11-25"], ["created_at", "2019-11-18 22:48:12.587415"], ["updated_at", "2019-11-18 22:48:12.587415"]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:48:12 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 26.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/4" for ::1 at 2019-11-18 14:48:14 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_schedule.html.erb (0.9ms)
+  Rendered schedules/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:48:18 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.5ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:48:37 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_form.html.erb (6.0ms)
+  Rendered schedules/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 94ms (Views: 92.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/schedules.self-e1ecbab3991d7013b51e3dcd1ea07a7dd8fe8f9cf19de7a18dcfad4a1d9f3641.css?body=1" for ::1 at 2019-11-18 14:48:37 -0800
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:48:40 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered schedules/_form.html.erb (5.3ms)
+  Rendered schedules/edit.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:49:24 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_form.html.erb (5.0ms)
+  Rendered schedules/edit.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:49:34 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered schedules/_form.html.erb (6.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 130ms (Views: 126.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/schedules.self-e055b6deee0162f53706b10b44ceb4f1842497813bcc0947b66f496934dc9e90.css?body=1" for ::1 at 2019-11-18 14:49:34 -0800
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:50:05 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_form.html.erb (4.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/schedules.self-8b29aab0d9a788dba1319a1f09fa3ad63b201d0aa5f67e5efe45f56b3b82a980.css?body=1" for ::1 at 2019-11-18 14:50:05 -0800
+
+
+Started GET "/users/1/schedules/4/edit" for ::1 at 2019-11-18 14:50:19 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered schedules/_form.html.erb (10.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 123ms (Views: 121.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/schedules.self-00a20f595d4c23d5c05cb904222c598190e10cb8264e1dab0b46d94ff4811efb.css?body=1" for ::1 at 2019-11-18 14:50:19 -0800
+
+
+Started PATCH "/users/1/schedules/4" for ::1 at 2019-11-18 14:50:33 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D1wblvoVY9Tw78sJAz9plS+xz+Xs0dCx4JNsX3BxY3Jl1jwaJr9BOEBwsH7jVTfm/Euuv6w9aCOdT2ItoDV/0Q==", "schedule"=>{"wed_times"=>["1030", "1130", "1230"], "mon_times"=>["1130"], "fri_times"=>["1130"], "thu_times"=>["1230"], "mon_var_times"=>["1430"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "schedules" SET "fri_times" = ?, "tue_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_times", "[\"1130\"]"], ["tue_times", "[]"], ["updated_at", "2019-11-18 22:50:33.318715"], ["id", 4]]
+  [1m[35m (5.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/4
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/users/1/schedules/4" for ::1 at 2019-11-18 14:50:33 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:51:35 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 58ms (Views: 56.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 14:51:37 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/_form.html.erb (6.7ms)
+  Rendered schedules/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 66ms (Views: 65.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/1/schedules" for ::1 at 2019-11-18 14:51:40 -0800
+Processing by SchedulesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NrfLAKL8zweBK56sSNVZgAYhCjCsEm8eahDFsZESHi5cPeyMflbt6zG05duovwfz1dtrauz+14wXzMvDQVYCjQ==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Create Schedule", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schedules" ("user_id", "fri_times", "start_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["user_id", "1"], ["fri_times", "[\"0900\"]"], ["start_date", "2019-11-25"], ["created_at", "2019-11-18 22:51:40.239173"], ["updated_at", "2019-11-18 22:51:40.239173"]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:51:40 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:51:42 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (1.3ms)
+  Rendered schedules/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:51:54 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (6.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:51:58 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k8eAQt//ife6qL04ACeKsbhY7TOr6bVCOu26zVEG6Bz5TafOA1WrGwo3xk/gTdTCa6KMaesFDdBHMbS/gUL0vw==", "schedule"=>{"fri_var_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "schedules" SET "fri_var_times" = ?, "mon_times" = ?, "tue_times" = ?, "wed_times" = ?, "thu_times" = ?, "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_var_times", "[\"0900\"]"], ["mon_times", "[]"], ["tue_times", "[]"], ["wed_times", "[]"], ["thu_times", "[]"], ["fri_times", "[]"], ["updated_at", "2019-11-18 22:51:58.469469"], ["id", 5]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:51:58 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.5ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.7ms)
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:52:06 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (7.9ms)
+  Rendered schedules/edit.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 69ms (Views: 66.0ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:52:09 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ye5EdeV3KKxnLqkthDxXd8FIk8U1AEOL5F2MVbM6h5wLZGP5Od0KQNex0lpkVgkEErLyn3Xs+xmZgYInY36bPw==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_times", "[\"0900\"]"], ["updated_at", "2019-11-18 22:52:09.297274"], ["id", 5]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:52:09 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.6ms)
+  Rendered schedules/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:52:21 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (6.0ms)
+  Rendered schedules/edit.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:52:44 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3UOXOy26hZ+fNdEP86DU9FYtmHZXypykU282dIOgunK3ybC38RCncy+qqngTyoqHhdf5LBcmJDYuszgGU+Sm0Q==", "schedule"=>{"start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_times", "[]"], ["updated_at", "2019-11-18 22:52:44.754625"], ["id", 5]]
+  [1m[35m (5.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:52:44 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (1.0ms)
+  Rendered schedules/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.4ms)
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:52:59 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (6.8ms)
+  Rendered schedules/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:53:19 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXWVgT1A7W2t1E1PKTF2l64RWZFtYBKmPBVsZz9Nxv1n/7IN4erPgR1LNjjJWyjkfes4yy2MqjRByWIV7wnaXg==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_times", "[\"0900\"]"], ["updated_at", "2019-11-18 22:53:19.633282"], ["id", 5]]
+  [1m[35m (6.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 12ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:53:19 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.7ms)
+  Rendered schedules/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:53:43 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (6.6ms)
+  Rendered schedules/edit.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 62ms (Views: 59.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:54:07 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o9wONyMfJwiSsy+w4FPRQMGTNApccZwwa7oulGSmWHPJVim7/7UF5CIsVMcAOY8zEmlVUBydJKIWZiDmtOJE0A==", "schedule"=>{"start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?[0m  [["fri_times", "[]"], ["updated_at", "2019-11-18 22:54:07.878748"], ["id", 5]]
+  [1m[35m (5.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:54:07 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.6ms)
+  Rendered schedules/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.8ms)
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:55:44 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.2ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_form.html.erb (3.9ms)
+  Rendered schedules/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 68ms (Views: 39.9ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:55:47 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oAoLuuLi/TlgodsZzL7LeQ09XujQFLOi+hQ8FivsB58CcsZwQMw2MJcWpR9pWfZGqyj65hudlH868xESaiYw==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.1ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::UnknownAttributeError (unknown attribute 'mon' for Schedule.):
+  app/controllers/schedules_controller.rb:58:in `block in update'
+  app/controllers/schedules_controller.rb:45:in `update'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (67.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (154.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:08 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3oAoLuuLi/TlgodsZzL7LeQ09XujQFLOi+hQ8FivsB58CcsZwQMw2MJcWpR9pWfZGqyj65hudlH868xESaiYw==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "schedules" SET "fri_times" = ?, "mon_var_times" = ?, "tue_var_times" = ?, "wed_var_times" = ?, "thu_var_times" = ?, "fri_var_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?  [["fri_times", "[\"0900\"]"], ["mon_var_times", "[]"], ["tue_var_times", "[]"], ["wed_var_times", "[]"], ["thu_var_times", "[]"], ["fri_var_times", "[]"], ["updated_at", "2019-11-18 22:56:09.004429"], ["id", 5]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 28ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:09 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.7ms)
+  Rendered schedules/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:56:11 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_form.html.erb (11.2ms)
+  Rendered schedules/edit.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 88ms (Views: 83.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:14 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VsSJ/BUHlBzm7nIn9woHtU+sLWmgvyw2lnJCsbs4tfY8Tq5wya228FZxCVAXYFnGnFZMM+BTlKTrrkzDa3ypVQ==", "schedule"=>{"start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?  [["fri_times", "[]"], ["updated_at", "2019-11-18 22:56:14.781020"], ["id", 5]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:14 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.6ms)
+  Rendered schedules/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules/5/edit" for ::1 at 2019-11-18 14:56:16 -0800
+Processing by SchedulesController#edit as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered schedules/_form.html.erb (34.0ms)
+  Rendered schedules/edit.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 242ms (Views: 235.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:21 -0800
+Processing by SchedulesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2t8AbY5bUdw0vXICNgBmiidaeDS6UYLor+kkU+E498SwVSfhUvFzMIQiCXXWajj59KAZbvq9OnrSNSohMXzrZw==", "schedule"=>{"fri_times"=>["0900"], "start_date(1i)"=>"2019", "start_date(2i)"=>"11", "start_date(3i)"=>"25"}, "commit"=>"Update Schedule", "user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "schedules" SET "fri_times" = ?, "updated_at" = ? WHERE "schedules"."id" = ?  [["fri_times", "[\"0900\"]"], ["updated_at", "2019-11-18 22:56:21.878969"], ["id", 5]]
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1/schedules/5
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:21 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-18 14:56:29 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 92ms (Views: 90.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:56:31 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.3ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/1/schedules/1" for ::1 at 2019-11-18 14:56:33 -0800
+Processing by SchedulesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WYRKY8FfAsKkZCc50xqfvGYrFvrNc3lrj9HXjRMFKVEzDm3vHfUgLhT7XE4zcMHPtdF3oI2fwfnyDdn/w0E18g==", "user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "schedules" WHERE "schedules"."id" = ?[0m  [["id", 1]]
+  [1m[35m (6.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1/schedules
+Completed 302 Found in 12ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:56:33 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/schedules/5" for ::1 at 2019-11-18 14:56:37 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"5"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.1ms)[0m  SELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered schedules/_schedule.html.erb (0.8ms)
+  Rendered schedules/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 74ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-18 14:56:39 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.3ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/schedules/new" for ::1 at 2019-11-18 15:03:07 -0800
+Processing by SchedulesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/_form.html.erb (5.9ms)
+  Rendered schedules/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 71ms (Views: 68.3ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for ::1 at 2019-11-22 13:49:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (333.9ms)
+Completed 200 OK in 422ms (Views: 390.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Ahyeon-e08c8eec72721a5953b5d9782853bf8920b423704a0b50eaa8a74bc7be9a573e.png" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Amy-ac56818f02fd62f41a83601332f99136579356d259e30c99a987178cdf7fcc58.jpg" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Ceshia-d989f36938a01de7178353df2f236398b6a3ee095aac74b94a6e6f46e91f8234.jpg" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Emily-ac548b1b9ea9cad222f00eb07a9ffb9b50d2f45490f40687094a5518578fdc48.jpg" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Cindy-1fe846176cd3c00a484209100988ce158debac4585d17c8f6ad76f9f49a3836b.png" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Kseniya-ec44ff324d8f63f770aab13f231546510ecea3ccdf1399bbb204408aebe94ddc.jpg" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Karla-64f84b14ea26e631414d6889e8d3d19a410cf2a973f3c91acfeea27b14717cf7.jpg" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Priyanka-e4a180d82556da5d1fd03cfa06e0eded921f1af21289a2af54ead21896ab63cc.png" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/assets/directors/Sofia-8bd90c207fa2506de695b512266cf7124273fe9881fb382595d8df4eb9886630.JPG" for ::1 at 2019-11-22 13:49:42 -0800
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:49:52 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 147ms (Views: 144.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:50:05 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:52:25 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 49ms (Views: 38.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-22 13:52:26 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (55.0ms)
+Completed 200 OK in 135ms (Views: 125.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:52:28 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-22 13:52:35 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:53:23 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2019-11-22 13:55:45 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 38ms (Views: 27.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-23 13:14:51 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (217.7ms)
+Completed 200 OK in 313ms (Views: 285.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-23 13:14:52 -0800
+
+
+Started GET "/assets/directors/Cindy-1fe846176cd3c00a484209100988ce158debac4585d17c8f6ad76f9f49a3836b.png" for ::1 at 2019-11-23 13:14:52 -0800
+
+
+Started GET "/assets/directors/Priyanka-e4a180d82556da5d1fd03cfa06e0eded921f1af21289a2af54ead21896ab63cc.png" for ::1 at 2019-11-23 13:14:52 -0800
+
+
+Started GET "/schedules" for ::1 at 2019-11-23 13:14:57 -0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered schedules/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <p id="notice"><%= notice %></p>
+    2: 
+    3: <h1>Listing Schedules for <%= @user.name %></h1>
+    4: 
+    5: <table>
+    6:   <thead>
+  app/views/schedules/index.html.erb:3:in `_app_views_schedules_index_html_erb___3251298836190110785_70223472760480'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (91.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (174.9ms)
+
+
+Started GET "/schedules" for ::1 at 2019-11-23 13:16:06 -0800
+Processing by SchedulesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (2.2ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m
+  Rendered schedules/index.html.erb within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"schedules", :id=>2} missing required keys: [:user_id]):
+    13:     <% @schedules.each do |schedule| %>
+    14:       <tr>
+    15:         <td><%= schedule.user_id %></td>
+    16:         <td><%= link_to 'Show', user_schedule_path(id: schedule.id) %></td>
+    17:         <td><%= link_to 'Edit', edit_user_schedule_path(id: schedule.id) %></td>
+    18:         <td><%= link_to 'Destroy', user_schedule_path(id: schedule.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    19:       </tr>
+  app/views/schedules/index.html.erb:16:in `block in _app_views_schedules_index_html_erb___3251298836190110785_70223444914020'
+  app/views/schedules/index.html.erb:13:in `_app_views_schedules_index_html_erb___3251298836190110785_70223444914020'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.1ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (157.0ms)
+
+
+Started GET "/schedules" for ::1 at 2019-11-23 13:17:01 -0800
+Processing by SchedulesController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered schedules/index.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/chrispyles/GitHub/Cal-NERDS/app/views/schedules/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/schedules/index.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+          ensure
+                ^
+/Users/chrispyles/GitHub/Cal-NERDS/app/views/schedules/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+          end
+             ^):
+  app/views/schedules/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+  app/views/schedules/index.html.erb:28: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/schedules/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (66.8ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (152.4ms)
+
+
+Started GET "/schedules" for ::1 at 2019-11-23 13:17:25 -0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.4ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (No route matches {:action=>"new", :controller=>"schedules"} missing required keys: [:user_id]):
+    23: 
+    24: <br>
+    25: 
+    26: <%= link_to 'New Schedule', new_user_schedule_path %>
+  app/views/schedules/index.html.erb:26:in `_app_views_schedules_index_html_erb___3251298836190110785_70223471651420'
+
+
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.6ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.9ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/chrispyles/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (151.1ms)
+
+
+Started GET "/schedules" for ::1 at 2019-11-23 13:17:53 -0800
+Processing by SchedulesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.3ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 82ms (Views: 74.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2019-11-23 13:18:02 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-23 13:18:03 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.4ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 156ms (Views: 149.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/schedules/4" for ::1 at 2019-11-23 13:18:07 -0800
+Processing by SchedulesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSchedule Load (0.2ms)[0m  [1mSELECT  "schedules".* FROM "schedules" WHERE "schedules"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered schedules/_schedule.html.erb (2.2ms)
+  Rendered schedules/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/schedules" for ::1 at 2019-11-23 13:18:45 -0800
+Processing by SchedulesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSchedule Load (0.8ms)[0m  SELECT "schedules".* FROM "schedules"
+  Rendered schedules/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 134ms (Views: 128.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-23 13:18:55 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 59ms (Views: 57.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for ::1 at 2019-11-23 13:18:57 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 82ms (Views: 79.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-11-23 13:19:02 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 81ms (Views: 79.8ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", nil]]
+
+
+Started GET "/" for ::1 at 2019-11-25 13:21:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (247.1ms)
+Completed 200 OK in 369ms (Views: 338.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/cal-nerds-bee65131904e407c880c7850ff35bb8e036eb3f412ff6be467364faa2ed3168e.png" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/directors/Ahyeon-e08c8eec72721a5953b5d9782853bf8920b423704a0b50eaa8a74bc7be9a573e.png" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/directors/Amy-ac56818f02fd62f41a83601332f99136579356d259e30c99a987178cdf7fcc58.jpg" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/directors/Ceshia-d989f36938a01de7178353df2f236398b6a3ee095aac74b94a6e6f46e91f8234.jpg" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/directors/Cindy-1fe846176cd3c00a484209100988ce158debac4585d17c8f6ad76f9f49a3836b.png" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/assets/directors/Priyanka-e4a180d82556da5d1fd03cfa06e0eded921f1af21289a2af54ead21896ab63cc.png" for ::1 at 2019-11-25 13:21:12 -0800
+
+
+Started GET "/" for ::1 at 2019-11-25 13:22:05 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-25 13:23:20 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-25 13:25:38 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 129ms (Views: 126.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-11-25 13:32:37 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 114ms (Views: 111.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2019-11-25 13:34:10 -0800
+Processing by StaticController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 187ms (Views: 185.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/static.self-7c2346d3b1f31e729f1384164c077539c0f531daf4cb4bc31fda8824e2dc07b0.css?body=1" for ::1 at 2019-11-25 13:34:11 -0800
+
+
+Started GET "/" for ::1 at 2019-11-25 13:36:17 -0800
+Processing by StaticController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered static/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 138ms (Views: 136.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/static.self-f6b70193f469818efcd90800c6527d457ed16840c0281366605e18fa19fc061f.css?body=1" for ::1 at 2019-11-25 13:36:18 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeStartDateToDate (20191119222412)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aschedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" date, "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) [0m
+  [1m[35m (0.5ms)[0m  SELECT * FROM "schedules"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (2, '2019-11-18 22:28:16.855891', '2019-11-18 22:29:31.394576', '1', '2019-11-29', '["1330"]', '[]', '["1200"]', '["1430"]', '[]', NULL, '["1430", "1700"]', NULL, NULL, '["1230"]')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (3, '2019-11-18 22:36:26.071343', '2019-11-18 22:36:26.071343', '1', '2019-11-25', '["1200", "1430"]', NULL, '["1300"]', '["1430"]', NULL, NULL, '["1530"]', '["1030"]', NULL, '["1030", "1400"]')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (4, '2019-11-18 22:48:12.587415', '2019-11-18 22:50:33.318715', '1', '2019-11-25', '["1130"]', '[]', '["1030", "1130", "1230"]', '["1230"]', '["1130"]', '["1430"]', NULL, NULL, '["1300"]', '["1130"]')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (5, '2019-11-18 22:51:40.239173', '2019-11-18 22:56:21.878969', '1', '2019-11-25', '[]', '[]', '[]', '[]', '["0900"]', '[]', '[]', '[]', '[]', '[]')
+  [1m[36m (0.9ms)[0m  [1mDROP TABLE "schedules"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" date USING CAST(start_date AS date), "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) 
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeStartDateToDate (20191119222412)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "aschedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" date, "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "schedules"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (2, '2019-11-18 22:28:16.855891', '2019-11-18 22:29:31.394576', '1', '2019-11-29', '["1330"]', '[]', '["1200"]', '["1430"]', '[]', NULL, '["1430", "1700"]', NULL, NULL, '["1230"]')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (3, '2019-11-18 22:36:26.071343', '2019-11-18 22:36:26.071343', '1', '2019-11-25', '["1200", "1430"]', NULL, '["1300"]', '["1430"]', NULL, NULL, '["1530"]', '["1030"]', NULL, '["1030", "1400"]')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (4, '2019-11-18 22:48:12.587415', '2019-11-18 22:50:33.318715', '1', '2019-11-25', '["1130"]', '[]', '["1030", "1130", "1230"]', '["1230"]', '["1130"]', '["1430"]', NULL, NULL, '["1300"]', '["1130"]')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "aschedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (5, '2019-11-18 22:51:40.239173', '2019-11-18 22:56:21.878969', '1', '2019-11-25', '[]', '[]', '[]', '[]', '["0900"]', '[]', '[]', '[]', '[]', '[]')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "schedules"[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "schedules" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" varchar, "start_date" datetime, "mon_times" varchar, "tue_times" varchar, "wed_times" varchar, "thu_times" varchar, "fri_times" varchar, "mon_var_times" varchar, "tue_var_times" varchar, "wed_var_times" varchar, "thu_var_times" varchar, "fri_var_times" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "aschedules"[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "schedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (2, '2019-11-18 22:28:16.855891', '2019-11-18 22:29:31.394576', '1', '2019-11-29', '["1330"]', '[]', '["1200"]', '["1430"]', '[]', NULL, '["1430", "1700"]', NULL, NULL, '["1230"]')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (3, '2019-11-18 22:36:26.071343', '2019-11-18 22:36:26.071343', '1', '2019-11-25', '["1200", "1430"]', NULL, '["1300"]', '["1430"]', NULL, NULL, '["1530"]', '["1030"]', NULL, '["1030", "1400"]')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (4, '2019-11-18 22:48:12.587415', '2019-11-18 22:50:33.318715', '1', '2019-11-25', '["1130"]', '[]', '["1030", "1130", "1230"]', '["1230"]', '["1130"]', '["1430"]', NULL, NULL, '["1300"]', '["1130"]')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "schedules" ("id","created_at","updated_at","user_id","start_date","mon_times","tue_times","wed_times","thu_times","fri_times","mon_var_times","tue_var_times","wed_var_times","thu_var_times","fri_var_times") VALUES (5, '2019-11-18 22:51:40.239173', '2019-11-18 22:56:21.878969', '1', '2019-11-25', '[]', '[]', '[]', '[]', '["0900"]', '[]', '[]', '[]', '[]', '[]')[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "aschedules"
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191119222412"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mSchedule Load (2.7ms)[0m  [1mSELECT "schedules".* FROM "schedules"[0m

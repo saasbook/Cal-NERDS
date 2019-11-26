@@ -5,6 +5,39 @@
 table#time-selection td {
 	border: 1px solid black;
 	height: 30px !important;
-	background-color: rgb(255, 255, 255);
 	width: 50px;
+}
+
+table#time-selection th {
+	width: 100px;
+}
+
+td.not-selected {
+	background-color: #FFFFFF;
+}
+
+td.fixed {
+	background-color: #3B7EA1;
+}
+
+td.variable {
+	background-color: #FDB515;
+}
+
+button.fixed-btn {
+	background-color: #3B7EA1;
+	border-color: rgba(255, 255, 255, 0);
+	&:hover {
+		background-color: #3B7EA1;
+		border-color: rgba(255, 255, 255, 0);
+	}
+}
+
+button.variable-btn {
+	background-color: #FDB515;
+	border-color: rgba(255, 255, 255, 0);
+	&:hover {
+		background-color: #FDB515;
+		border-color: rgba(255, 255, 255, 0);
+	}
 }
