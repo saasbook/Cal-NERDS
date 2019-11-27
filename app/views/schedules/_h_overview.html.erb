@@ -1,0 +1,22 @@
+
+<% for day in Schedule::WEEKDAYS_FULL %>
+  <table id=<%="schedule-overview-"+day%> style="display: inline-block;">
+    <tr>
+      <th>Users</th>
+        <th class=<%= day %>><%= day.capitalize %></th>
+        <% for time in Schedule.times %>
+          <th><%= Schedule.str_to_formatted_time time%></th>
+        <%end%>
+    </tr>
+
+    <% for user in @users %>
+    <tr>
+        <td class="user-name"><%= user.name %></td>
+        <td class="day-filler">&nbsp</td>
+        <% for time in Schedule.times %>
+          <td class="time-entry not-selected" id="<%= day %>-<%= time %>"></td>
+        <% end %>
+    </tr>
+    <%end%>
+  </table>
+<% end %>

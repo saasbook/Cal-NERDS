@@ -1,0 +1,32 @@
+<table id="schedule-overview" style="display: inline-block;">
+<tr>
+  <% for day in Schedule::WEEKDAYS_FULL %>
+      <th>Times</th>
+      <% for user in @users %>
+          <th class="user_name"><%= user %></th>
+      <% end %>
+  <%end%>
+</tr>
+
+<tr>
+  <% for day in Schedule::WEEKDAYS_FULL %>
+        <td class=<%= day %>><%= day.capitalize %></td>
+          <% for i in @users.length.times%>
+              <td>A</td>
+          <%end%>
+  <% end %>
+</tr>
+    
+    
+<% for time in Schedule.times %>
+    <tr>
+        <td><%= Schedule.str_to_formatted_time time%></td>
+        <% for day in Schedule::WEEKDAYS_FULL %>
+            <% for i in @users.length.times%>
+                <td>B</td>
+            <%end%>
+        <% end %>
+    </tr>
+<%end%>
+      
+</table>

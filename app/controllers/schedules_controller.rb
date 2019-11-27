@@ -75,9 +75,18 @@ class SchedulesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  # GET /schedules/overview
   def overview
     @schedules = Schedule.all
+    
+    #todo: refactor for demeter principle
+    @users = User.all.order(:name)
+    
+    #if schedules are empty
+    if true
+      flash[:notice] = "No schedules have been added."
+    end
   end
   
   private
