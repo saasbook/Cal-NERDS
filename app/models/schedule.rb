@@ -28,8 +28,8 @@ class Schedule < ActiveRecord::Base
 	end
 
 	def self.get_user_time_strings user
-		user = Schedule.find(user.id)
-		self.parse_times_strings user
+		schedule = Schedule.where(user_id: user.id).first
+		self.parse_times_strings schedule unless schedule.nil?
 	end
 	
 	def self.parse_times_strings schedule
@@ -80,5 +80,8 @@ class Schedule < ActiveRecord::Base
 
 		return weekdays
 	end
-
+	
+	def self.has_no_schedules
+		Schedule.first.nil?
+	end
 end

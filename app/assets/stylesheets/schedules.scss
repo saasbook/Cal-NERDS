@@ -8,8 +8,19 @@ table#time-selection td {
 	width: 50px;
 }
 
+
 table#time-selection th {
 	width: 100px;
+}
+
+table.schedule-overview td {
+	border: 1px solid black;
+	height: 30px !important;
+	width: 50px;
+}
+
+table.schedule-overview th {
+	width: 500px;
 }
 
 td.not-selected {

@@ -79,12 +79,18 @@ class SchedulesController < ApplicationController
   # GET /schedules/overview
   def overview
     @schedules = Schedule.all
-    
-    #todo: refactor for demeter principle
     @users = User.all.order(:name)
+    @user_time_hash = Hash.new
+    for user in @users
+     times_hash = Schedule.get_user_time_strings user
+     if times_hash.nil?
+      @user_time_hash[user.id] = Hash.new []
+     else
+       @user_time_hash[user.id] = times_hash
+     end
+    end
     
-    #if schedules are empty
-    if true
+    if Schedule.has_no_schedules
       flash[:notice] = "No schedules have been added."
     end
   end
