@@ -8,8 +8,9 @@ Background: Logged in as Student Director
     | Chris | chris@berkeley.edu  | true  | true  | 1  |
     | Amy   | amy@berkeley.edu    | true  | false | 2  |
     | Bette | dane@berkeley.edu   | true  | false | 3  |
-    And I am logged in as Chris
     And I am on "/"
+    And I am logged in as Chris
+    
 
 # Helpful to have visual feedback, otherwise user may think something isn't working
 Scenario: Viewing empty schedule overview page
@@ -64,11 +65,14 @@ Scenario: Page updates when schedule is changed
     | wed    | 1100 |
     | wed    | 1200 |
     | thu    | 1000 |
+  And I switch the user to "Amy"
   When I update Amy's schedule with the following:
     | day    | time |
     | mon    | 1000 |
     | thu    | 1630 |
-    | fri    | 1300 |
+    | fri    | 1600 |
+  And I press "Update Schedule"
+  And I switch the user to "Chris"
   And I am on "/schedules/overview"
   Then I should not see "No schedules have been added."
   And I should see the following times for "Amy":
@@ -77,8 +81,6 @@ Scenario: Page updates when schedule is changed
     | wed    | 1000 |
     | thu    | 1000 |
     | thu    | 1630 |
-    | fri    | 1300 |
-    | fri    | 1600 |
   And I should see the following times for "Bette":
     | day    | time |
     | tue    | 1000 |
