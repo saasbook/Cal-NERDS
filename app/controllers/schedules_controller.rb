@@ -31,6 +31,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
     respond_to do |format|
       if @schedule.save
+        ScheduleMailer.schedule_email(user: @schedule.user).deliver_later
         format.html { redirect_to user_schedules_path, notice: 'Schedule was successfully created.' }
         format.json { render :show, status: :created, location: @schedule }
       else
@@ -107,9 +108,9 @@ class SchedulesController < ApplicationController
     end
 
     def check_user_permissions
-      if !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
+      if !@user.admin && !params[:user_id].nil? && @user.id != params[:user_id].to_i
         redirect_to root_path, notice: 'You are not authorized to access this page.'
-      elsif params[:user_id].nil? && !@current_user.admin
+      elsif params[:user_id].nil? && !@user.admin
         redirect_to root_path, notice: 'You are not authorized to access this page.'
       end
     end

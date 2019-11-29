@@ -10,6 +10,10 @@ class User < ActiveRecord::Base
     end
   end
 
+	def self.get_admins
+		User.where(admin: true).first
+	end
+
 
 
 	# 	User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
