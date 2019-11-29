@@ -31,7 +31,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.new(schedule_params)
     respond_to do |format|
       if @schedule.save
-        ScheduleMailer.schedule_email(user: @schedule.user).deliver_later
+        ScheduleMailer.schedule_email(@schedule.user).deliver_later
         format.html { redirect_to user_schedules_path, notice: 'Schedule was successfully created.' }
         format.json { render :show, status: :created, location: @schedule }
       else
