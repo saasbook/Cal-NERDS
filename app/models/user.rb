@@ -14,6 +14,19 @@ class User < ActiveRecord::Base
 		User.where(admin: true).first
 	end
 
+	def self.get_non_admins
+		User.where(admin: false)
+	end
+
+	def schedule_exists? day
+		self.schedules.each do |schedule|
+			if schedule.start_date == day
+				return true
+			end
+		end
+		return false
+	end
+
 
 
 	# 	User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
