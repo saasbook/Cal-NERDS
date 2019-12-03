@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get 'dashboard/index'
 
   # resources :schedules
+  get 'schedules/overview', to: 'schedules#overview'
+  
   get 'sessions/create'
   delete 'sessions', to: 'sessions#destroy'
 

@@ -75,7 +75,26 @@ class SchedulesController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+  
+  # GET /schedules/overview
+  def overview
+    @schedules = Schedule.all
+    @users = User.all.order(:name)
+    @user_time_hash = Hash.new
+    for user in @users
+     times_hash = Schedule.get_user_time_strings user
+     if times_hash.nil?
+      @user_time_hash[user.id] = Hash.new []
+     else
+       @user_time_hash[user.id] = times_hash
+     end
+    end
+    
+    if Schedule.has_no_schedules
+      flash[:notice] = "No schedules have been added."
+    end
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_schedule

@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
     end
   end
 
+	def self.first_name user
+		user.name.rpartition(' ').first
+	end
+	
+	def self.last_name user
+		user.name.rpartition(' ').last
+	end
 
 
 	# 	User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|

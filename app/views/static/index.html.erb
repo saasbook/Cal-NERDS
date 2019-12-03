@@ -39,6 +39,10 @@
 		<td>
 			<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user) %>
 		</td>
+		
+		<td>
+			<%= link_to "<button class=\"btn btn-light\">View Schedule Overview</button>".html_safe, schedules_overview_path %>
+		</td>
 
 		<% if @current_user.admin %>
 

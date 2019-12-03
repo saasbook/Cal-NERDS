@@ -17,3 +17,12 @@ Given /^I am logged in as (\w+)$/ do |name|
 	visit "/"
 	click_link "Log In with Google"
 end
+
+Given /^I log out$/ do
+	click_link "Log Out"
+end
+
+Given /^I switch the user to "(\w+)"$/ do |name|
+	step "I log out"
+	step "I am logged in as "+name
+end

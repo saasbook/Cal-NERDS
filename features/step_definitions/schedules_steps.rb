@@ -1,3 +1,8 @@
+Given /^there are no schedules in the database$/ do
+    Schedule.delete_all
+    expect(Schedule.all.count).to eq(0)
+end
+
 Given /^I have created a schedule with the following times for (\w+):$/ do |name, schedule_table|
     sched_params = {
         "mon_times" => [],

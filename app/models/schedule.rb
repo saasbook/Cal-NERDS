@@ -5,9 +5,10 @@ class Schedule < ActiveRecord::Base
 	include SchedulesHelper
 
 	WEEKDAYS = %w{mon tue wed thu fri}
+	WEEKDAYS_FULL = %w{monday tuesday wednesday thursday friday}
 
 	def self.weekdays
-		return %w{mon tue wed thu fri}
+		return WEEKDAYS
 	end
 
 	def self.times
@@ -26,10 +27,14 @@ class Schedule < ActiveRecord::Base
 		time.strftime("%-I:%M %p")
 	end
 
-
+	def self.get_user_time_strings user
+		schedule = Schedule.where(user_id: user.id).order(:created_at).last
+		self.parse_times_strings schedule unless schedule.nil?
+	end
+	
 	def self.parse_times_strings schedule
 		times = {}
-		for day in ["mon", "tue", "wed", "thu", "fri"]
+		for day in WEEKDAYS
 			sym = "#{day}_times".to_sym
 			times_string = schedule.send sym
 			if !times_string.nil? && times_string.length != 0
@@ -75,5 +80,8 @@ class Schedule < ActiveRecord::Base
 
 		return weekdays
 	end
-
+	
+	def self.has_no_schedules
+		Schedule.first.nil?
+	end
 end

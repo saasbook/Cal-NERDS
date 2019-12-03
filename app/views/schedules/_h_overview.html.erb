@@ -1,0 +1,37 @@
+
+<% for day in Schedule::WEEKDAYS_FULL %>
+<table class="schedule-overview" id=<%="schedule-overview-"+day%> style="display: inline-block;">
+  <tr>
+    <th class=<%= day %>> 
+      <%= day.capitalize %>
+    </th>
+    <% for time in Schedule.times %>
+    <th>
+      <%= Schedule.str_to_formatted_time time%>
+    </th>
+    <%end%>
+  </tr>
+
+  <% for user in @users %>
+  <tr>
+    <td class="user-name"><%= User.first_name user%> <br> <%= User.last_name user %></td>
+    <% for time in Schedule.times %>
+    <td class="time-entry not-selected" id="<%= day[0,3] %>-<%= time %>-<%=user.id%>"></td>
+    <% end %>
+  </tr>
+  <%end%>
+</table>
+<% end %>
+
+<script type="text/javascript">
+<% for user in @users %>
+  <% for day in Schedule.weekdays %>
+    <% for time in @user_time_hash[user.id][(day + "_times").to_sym] %>
+  $("#<%= day %>-<%= time %>-<%=user.id%>").toggleClass("not-selected").toggleClass("fixed");
+    <% end %>
+    <% for time in @user_time_hash[user.id][(day + "_var_times").to_sym] %>
+  $("#<%= day %>-<%= time %>-<%=user.id%>").toggleClass("not-selected").toggleClass("variable");
+    <% end %>
+  <% end %>
+<% end %>
+</script>
