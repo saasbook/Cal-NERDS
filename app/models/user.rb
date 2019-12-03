@@ -10,12 +10,30 @@ class User < ActiveRecord::Base
     end
   end
 
+
 	def self.first_name user
 		user.name.rpartition(' ').first
 	end
 	
 	def self.last_name user
 		user.name.rpartition(' ').last
+	end
+
+	def self.get_admins
+		User.where(admin: true).first
+	end
+
+	def self.get_non_admins
+		User.where(admin: false)
+	end
+
+	def schedule_exists? day
+		self.schedules.each do |schedule|
+			if schedule.start_date == day
+				return true
+			end
+		end
+		return false
 	end
 
 

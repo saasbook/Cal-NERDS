@@ -112,6 +112,10 @@ GEM
     cucumber-rails-training-wheels (1.0.0)
       cucumber-rails (>= 1.1.1)
     cucumber-tag_expressions (1.1.1)
+    cucumber-timecop (0.0.6)
+      chronic
+      cucumber
+      timecop
     cucumber-wire (0.0.1)
     database_cleaner (1.7.0)
     debug_inspector (0.0.3)
@@ -119,8 +123,14 @@ GEM
     docile (1.3.2)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    email_spec (2.2.0)
+      htmlentities (~> 4.3.3)
+      launchy (~> 2.1)
+      mail (~> 2.7)
     equalizer (0.0.11)
     erubis (2.7.0)
+    et-orbi (1.2.2)
+      tzinfo
     execjs (2.7.0)
     factory_girl (4.9.0)
       activesupport (>= 3.0.0)
@@ -143,6 +153,9 @@ GEM
       ruby_parser (~> 3.1, > 3.1.0)
       sexp_processor (~> 4.8)
     formatador (0.2.5)
+    fugit (1.3.3)
+      et-orbi (~> 1.1, >= 1.1.8)
+      raabro (~> 1.1)
     gherkin (5.1.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -162,6 +175,7 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     hashie (3.6.0)
     hirb (0.7.3)
+    htmlentities (4.3.4)
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
@@ -266,6 +280,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     public_suffix (4.0.1)
+    raabro (1.1.6)
     rack (1.6.11)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -355,6 +370,8 @@ GEM
     ruby_parser (3.14.1)
       sexp_processor (~> 4.9)
     rubyzip (2.0.0)
+    rufus-scheduler (3.6.0)
+      fugit (~> 1.1, >= 1.1.6)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -391,6 +408,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    timecop (0.9.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -433,7 +451,9 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   cucumber-rails
   cucumber-rails-training-wheels
+  cucumber-timecop
   database_cleaner
+  email_spec
   factory_girl_rails
   figaro
   guard-rspec
@@ -448,6 +468,7 @@ DEPENDENCIES
   rails (= 4.2.10)
   rails_12factor
   rspec-rails
+  rufus-scheduler
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   selenium-webdriver
