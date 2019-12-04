@@ -44,6 +44,10 @@ Given /^(?:a clear email queue|no emails have been sent)$/ do
   reset_mailer
 end
 
+When /^I wait for (\d+) secs$/ do |time|
+  sleep(time)
+end
+
 #
 # Check how many emails have been sent/received
 #

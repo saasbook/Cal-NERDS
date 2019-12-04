@@ -20,11 +20,11 @@ class User < ActiveRecord::Base
 	end
 
 	def self.get_admins
-		User.where(admin: true).first
+		User.where(admin: true)
 	end
 
 	def self.get_non_admins
-		User.where(admin: false)
+		User.where(admin: false).where(auth: true)
 	end
 
 	def schedule_exists? day

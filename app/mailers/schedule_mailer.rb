@@ -3,7 +3,10 @@ class ScheduleMailer < ApplicationMailer
 
   def schedule_email(user)
     @user = user
-    @admin = User.get_admins
-    mail(to: @admin.email, subject: 'Schedule filled out')
+    admins = User.get_admins
+    admins.each do |admin|
+    	@admin = admin
+	    mail(to: @admin.email, subject: 'Schedule filled out')
+	  end
   end
 end

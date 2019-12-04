@@ -21,8 +21,8 @@ describe ScheduleMailer do
       expect(mail.from).to eql(['notifications@example.com'])
     end
 
-    it 'assigns @name' do
-      mail.body.encoded.should include('Hello John Doe, the schedule for Jane Doe has been filled out.')
+    it 'has the correct text' do
+      expect(mail.body.encoded).to include('Hello John Doe, the schedule for Jane Doe has been filled out.')
     end
   end
 end
