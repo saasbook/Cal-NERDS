@@ -34,6 +34,9 @@ gem 'figaro'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# for scheduling emails
+gem 'rufus-scheduler'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -69,4 +72,6 @@ group :test do
   gem 'webrat'         # webrat and poltergeist for JS testing
   gem 'poltergeist'
   gem 'rack_session_access'
+  gem 'email_spec'
+  gem 'cucumber-timecop', :require => false
 end

@@ -1,4 +1,6 @@
 require 'simplecov'
+require 'email_spec'
+require 'email_spec/rspec'
 
 require 'omniauth-google-oauth2'
 OmniAuth.config.test_mode = true

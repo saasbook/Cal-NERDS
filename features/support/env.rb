@@ -14,6 +14,9 @@ require 'cucumber/rails'
 require 'capybara-screenshot/cucumber'
 require 'capybara/poltergeist'
 require 'webrat'
+require 'email_spec'
+require 'email_spec/cucumber'
+require 'cucumber/timecop'
 Capybara.save_path = "./tmp/failures"
 
 OmniAuth.config.test_mode = true

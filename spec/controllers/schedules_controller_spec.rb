@@ -91,12 +91,14 @@ RSpec.describe SchedulesController, type: :controller do
 
 		it 'should assign @schedule' do
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
+			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]"}}
 			expect(assigns(:schedule)).not_to be_nil
 			expect(assigns(:schedule).class).to eq(Schedule)
 		end
 
 		it 'should redirect to index page if successful' do
+			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect_any_instance_of(Schedule).to receive(:save).and_return(true)
 			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]"}}
