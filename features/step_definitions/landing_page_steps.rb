@@ -19,10 +19,14 @@ Given /^I am logged in as (\w+)$/ do |name|
 end
 
 Given /^I log out$/ do
+	visit "/"
 	click_link "Log Out"
 end
 
 Given /^I switch the user to "(\w+)"$/ do |name|
-	step "I log out"
+	begin
+		step "I log out"
+	rescue Capybara::ElementNotFound
+	end
 	step "I am logged in as "+name
 end

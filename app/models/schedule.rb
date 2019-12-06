@@ -84,4 +84,16 @@ class Schedule < ActiveRecord::Base
 	def self.has_no_schedules
 		Schedule.first.nil?
 	end
+
+	def self.find_by_start_date schedule
+		Schedule.where(user_id: schedule.user_id).where(start_date: schedule.start_date)[0]
+	end
+
+	def self.start_date_exists? schedule
+		Schedule.where(user_id: schedule.user_id).where(start_date: schedule.start_date).length > 0
+	end
+
+	def self.is_monday? date
+		date.monday?
+	end
 end

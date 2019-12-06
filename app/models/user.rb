@@ -24,18 +24,8 @@ class User < ActiveRecord::Base
 	end
 
 	def self.get_non_admins
-		User.where(admin: false).where(auth: true)
+		User.where(admin: false, auth: true)
 	end
-
-	def schedule_exists? day
-		self.schedules.each do |schedule|
-			if schedule.start_date == day
-				return true
-			end
-		end
-		return false
-	end
-
 
 	# 	User.where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
 	# 	  user.provider = auth.provider
