@@ -13,7 +13,7 @@ Background: Logged in as Student Director
 
 # Helpful to have visual feedback, otherwise user may think something isn't working
 Scenario: Viewing empty schedule overview page
-  GivenI am logged in as Chris
+  Given I am logged in as Chris
   And  there are no schedules in the database
   And I am on "/schedules/overview"
   Then I should see "No schedules have been added."
