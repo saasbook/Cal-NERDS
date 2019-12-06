@@ -127,7 +127,9 @@ class SchedulesController < ApplicationController
     end
 
     def check_user_permissions
-      if !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
+      if @current_user.nil?
+        redirect_to root_path, notice: 'You are not logged in.'
+      elsif !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
         redirect_to root_path, notice: 'You are not authorized to access this page.'
       elsif params[:user_id].nil? && !@current_user.admin
         redirect_to root_path, notice: 'You are not authorized to access this page.'
