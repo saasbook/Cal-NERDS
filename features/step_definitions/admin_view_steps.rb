@@ -9,7 +9,7 @@ end
 
 When /^I switch the user to (\w+)$/ do |name|
 	visit "/"
-	if expect(page).to have_content("Log Out")
+	if page.has_content? "Log Out"
 		click_on "Log Out"
 	end
 	steps %{I am logged in as #{name}}

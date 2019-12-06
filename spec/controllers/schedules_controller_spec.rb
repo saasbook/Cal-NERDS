@@ -104,6 +104,12 @@ RSpec.describe SchedulesController, type: :controller do
 			expect(response).to redirect_to edit_user_schedule_path(3, 1)
 		end
 
+		it 'should redirect if start_date is not a monday' do
+			expect(User).to receive(:find).with('3').and_return(@auths[1])
+			post :create, {user_id: 3, schedule: {start_date: '2019-12-03'}}
+			expect(response).to redirect_to new_user_schedule_path 3
+		end
+
 		it 'should assign @schedule' do
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
