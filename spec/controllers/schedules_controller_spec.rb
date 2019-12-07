@@ -3,10 +3,6 @@ require 'rails_helper'
 RSpec.describe SchedulesController, type: :controller do
 
 	before :each do
-		expect_any_instance_of(SchedulesController).to receive :check_user_permissions
-	end
-
-	before :each do
 		@admin = User.create(id: 1, name: 'John Doe', email: 'jdoe@berkeley.edu', auth: true, admin: true)
 		@auths = [
 			User.create(id: 2, name: 'Jane Doe', email: 'jdoe2@berkeley.edu', auth: true, admin: false),
@@ -18,9 +14,21 @@ RSpec.describe SchedulesController, type: :controller do
 	end
 
 	describe 'GET index' do
-		it 'should assign @schedules' do
-			get :index, {user_id: 2}
-			expect(assigns(:schedules)).not_to be_nil
+
+		before :each do
+			Schedule.create!(id: 1, user_id: 2, start_date: Date.parse('2019-12-02').to_datetime, 
+				mon_times: "[1000, 1030, 1100, 1130]")
+		end
+
+		it 'should assign @this_monday' do
+			get :index, {schedule_start_date: '2019-12-02', user_id: 2}
+			expect(assigns(:this_monday)).not_to be_nil
+			expect(assigns(:this_monday)).to eq(Date.parse('2019-12-02'))
+		end
+
+		it 'should redirect if no user supplied' do
+			get :index, {schedule_start_date: '2019-12-02'}
+			expect(response).to redirect_to root_path
 		end
 	end
 
@@ -89,10 +97,23 @@ RSpec.describe SchedulesController, type: :controller do
 			expect(User).to receive(:find).with(3).and_return(@auths[1])
 		end
 
+		it 'should redirect if start date already exists' do
+			expect(User).to receive(:find).with('3').and_return(@auths[1])
+			Schedule.create(id: 1, user_id: 3, start_date: Date.parse('2019-12-02').to_datetime)
+			post :create, {user_id: 3, schedule: {start_date: '2019-12-02'}}
+			expect(response).to redirect_to edit_user_schedule_path(3, 1)
+		end
+
+		it 'should redirect if start_date is not a monday' do
+			expect(User).to receive(:find).with('3').and_return(@auths[1])
+			post :create, {user_id: 3, schedule: {start_date: '2019-12-03'}}
+			expect(response).to redirect_to new_user_schedule_path 3
+		end
+
 		it 'should assign @schedule' do
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
-			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]"}}
+			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]", start_date: "2019-12-02"}}
 			expect(assigns(:schedule)).not_to be_nil
 			expect(assigns(:schedule).class).to eq(Schedule)
 		end
@@ -101,14 +122,14 @@ RSpec.describe SchedulesController, type: :controller do
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect_any_instance_of(Schedule).to receive(:save).and_return(true)
-			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]"}}
+			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]", start_date: "2019-12-02"}}
 			expect(response).to redirect_to(user_schedules_path @auths[1])
 		end
 
 		it 'should render the new template if unsuccessful' do
 			expect(User).to receive(:find).with("3").and_return(@auths[1])
 			expect_any_instance_of(Schedule).to receive(:save).and_return(false)
-			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]"}}
+			post :create, {user_id: 3, schedule: {mon_times: "[1000, 1030]", start_date: "2019-12-02"}}
 			expect(response).to render_template(:new)
 		end
 	end

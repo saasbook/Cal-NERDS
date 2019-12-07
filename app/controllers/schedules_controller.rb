@@ -1,12 +1,32 @@
 class SchedulesController < ApplicationController
-  before_action :set_current_user, :set_user
-  before_action :check_user_permissions
+  before_action :set_current_user
+  before_action :set_user
+  
+  if !Rails.env.test?
+    before_action :check_user_permissions
+  end
+
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
 
   # GET /schedules
   # GET /schedules.json
   def index
-    @schedules = Schedule.all
+    if params[:schedule_start_date].nil?
+      @this_monday = Date.today.monday.to_datetime
+    else
+      @this_monday = DateTime.parse(params[:schedule_start_date])
+    end
+    if !@user.nil?
+      @schedule = Schedule.where(user_id: @user.id).where(start_date: @this_monday).first
+    else
+      redirect_to root_path, notice: 'No user selected.'
+    end
+    if !@schedule.nil?
+      @times_hash = Schedule.parse_times_strings @schedule
+      @render = true
+    else
+      @render = false
+    end
   end
 
   # GET /schedules/1
@@ -29,14 +49,22 @@ class SchedulesController < ApplicationController
   # POST /schedules.json
   def create
     @schedule = Schedule.new(schedule_params)
-    respond_to do |format|
-      if @schedule.save
-        ScheduleMailer.schedule_email(@schedule.user).deliver_later
-        format.html { redirect_to user_schedules_path, notice: 'Schedule was successfully created.' }
-        format.json { render :show, status: :created, location: @schedule }
-      else
-        format.html { render :new }
-        format.json { render json: @schedule.errors, status: :unprocessable_entity }
+
+    if Schedule.start_date_exists? @schedule
+      sched = Schedule.find_by_start_date @schedule
+      redirect_to edit_user_schedule_path(@user, sched), notice: 'A schedule with this start date already exists.'
+    elsif !Schedule.is_monday? @schedule.start_date
+      redirect_to new_user_schedule_path(@user), notice: 'The selected start date is not a Monday.'
+    else
+      respond_to do |format|
+        if @schedule.save
+          ScheduleMailer.schedule_email(@schedule.user).deliver_later
+          format.html { redirect_to user_schedules_path, notice: 'Schedule was successfully created.' }
+          format.json { render :show, status: :created, location: @schedule }
+        else
+          format.html { render :new }
+          format.json { render json: @schedule.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -80,7 +108,7 @@ class SchedulesController < ApplicationController
   # GET /schedules/overview
   def overview
     @schedules = Schedule.all
-    @users = User.all.order(:name)
+    @users = User.get_non_admins.order(:name)
     @user_time_hash = Hash.new
     for user in @users
      times_hash = Schedule.get_user_time_strings user
@@ -127,7 +155,9 @@ class SchedulesController < ApplicationController
     end
 
     def check_user_permissions
-      if !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
+      if @current_user.nil?
+        redirect_to root_path, notice: 'You are not logged in.'
+      elsif !@current_user.admin && !params[:user_id].nil? && @current_user.id != params[:user_id].to_i
         redirect_to root_path, notice: 'You are not authorized to access this page.'
       elsif params[:user_id].nil? && !@current_user.admin
         redirect_to root_path, notice: 'You are not authorized to access this page.'

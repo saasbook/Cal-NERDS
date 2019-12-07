@@ -1,25 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Schedules<% if !@user.nil? %> for <%= @user.name %><% end %></h1>
+<h1>Showing Schedules<% if !@user.nil? %> for <%= @user.name %><% end %></h1>
 
 <table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @schedules.each do |schedule| %>
-      <tr>
-        <td><%= schedule.start_date.strftime("%b %-d, %Y") %></td>
-        <td><%= link_to 'Show', user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
-        <td><%= link_to 'Edit', edit_user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
-        <td><%= link_to 'Destroy', user_schedule_path(id: schedule.id, user_id: schedule.user_id, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <tr>
+    <td><%= link_to '←', {schedule_start_date: @this_monday - 1.week} %></td>
+    <td>Week Start Date: <%= @this_monday.to_date %></td>
+    <td><%= link_to '→', {schedule_start_date: @this_monday + 1.week} %></td>
+  </tr>
 </table>
+
+<% if @render %>
+
+  <%= render 'schedule' %>
+
+<% end %>
 
 <br>
 
