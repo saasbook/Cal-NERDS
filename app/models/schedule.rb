@@ -27,8 +27,8 @@ class Schedule < ActiveRecord::Base
 		time.strftime("%-I:%M %p")
 	end
 
-	def self.get_user_time_strings user
-		schedule = Schedule.where(user_id: user.id).order(:created_at).last
+	def self.get_user_time_strings(user, date)
+		schedule = Schedule.where(user_id: user.id).where(start_date: date).first
 		self.parse_times_strings schedule unless schedule.nil?
 	end
 	

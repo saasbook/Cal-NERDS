@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Schedule, type: :model do
   describe 'parse_times_strings' do
-  	it 'should parse some times from a Schedule' do
+  	it 'should parse some times from a Schedule into a hash' do
   		sched = instance_double('Schedule', 
   			mon_times: '["1000", "1030", "1100", "1300", "1330"]',
   			tue_times: nil,

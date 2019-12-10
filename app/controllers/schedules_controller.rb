@@ -107,11 +107,16 @@ class SchedulesController < ApplicationController
   
   # GET /schedules/overview
   def overview
+    if params[:schedule_start_date].nil?
+      @this_monday = Date.today.monday.to_datetime
+    else
+      @this_monday = DateTime.parse(params[:schedule_start_date])
+    end
     @schedules = Schedule.all
     @users = User.get_non_admins.order(:name)
     @user_time_hash = Hash.new
     for user in @users
-     times_hash = Schedule.get_user_time_strings user
+     times_hash = Schedule.get_user_time_strings(user, @this_monday)
      if times_hash.nil?
       @user_time_hash[user.id] = Hash.new []
      else
@@ -119,9 +124,13 @@ class SchedulesController < ApplicationController
      end
     end
     
+    
     if Schedule.has_no_schedules
       flash[:notice] = "No schedules have been added."
+    elsif @users.empty?
+      flash[:notice] = "No users found."
     end
+    
   end
   
   private
