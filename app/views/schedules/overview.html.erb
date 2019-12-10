@@ -1,1 +1,9 @@
+<table>
+  <tr>
+    <td><%= link_to '←', {schedule_start_date: @this_monday - 1.week} %></td>
+    <td>Week Start Date: <%= @this_monday.to_date %></td>
+    <td><%= link_to '→', {schedule_start_date: @this_monday + 1.week} %></td>
+  </tr>
+</table>
+
 <%= render 'h_overview' %>

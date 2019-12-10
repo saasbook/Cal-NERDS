@@ -26,6 +26,7 @@ Given /^I have created a schedule with the following times for (\w+):$/ do |name
     # sched_params = Schedule.group_weekday(table)
     user = User.where(name: name)[0]
     sched_params[:user_id] = user.id
+    sched_params[:start_date] = Date.today.monday.to_datetime
     @schedule = Schedule.create(sched_params)
 end
 

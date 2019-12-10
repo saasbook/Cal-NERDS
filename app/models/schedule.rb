@@ -11,6 +11,7 @@ class Schedule < ActiveRecord::Base
 		return WEEKDAYS
 	end
 
+	# Returns all valid work times
 	def self.times
 		arr = []
 		for i in 9..17
@@ -27,11 +28,13 @@ class Schedule < ActiveRecord::Base
 		time.strftime("%-I:%M %p")
 	end
 
-	def self.get_user_time_strings user
-		schedule = Schedule.where(user_id: user.id).order(:created_at).last
+	# Finds corresponding times for given user and week start date
+	def self.get_user_time_strings(user, date)
+		schedule = Schedule.where(user_id: user.id).where(start_date: date).first
 		self.parse_times_strings schedule unless schedule.nil?
 	end
 	
+	# Converts database string format to hash with day key values
 	def self.parse_times_strings schedule
 		times = {}
 		for day in WEEKDAYS
