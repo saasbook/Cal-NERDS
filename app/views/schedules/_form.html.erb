@@ -1,0 +1,116 @@
+<table id="time-selection" style="display: inline-block;">
+
+  <tr>
+    <th>Time</th>
+    <th class="day-selector">Monday</th>
+    <th class="day-selector">Tuesday</th>
+    <th class="day-selector">Wednesday</th>
+    <th class="day-selector">Thursday</th>
+    <th class="day-selector">Friday</th>
+  </tr>
+
+  <% for time in Schedule.times %>
+
+    <tr>
+
+      <td><%= Schedule.str_to_formatted_time time%></td>
+      
+      <% for day in Schedule.weekdays %>      
+        
+        <td class="time-entry not-selected" id="<%= day %>-<%= time %>"></td>
+
+      <% end %>
+
+    </tr>
+
+  <% end %>
+
+</table>
+
+<table style="display: inline-block;">
+  <tr>
+    <th><button class="btn btn-primary fixed-btn" id="fixed-btn">Fixed Hours</button></th>
+  </tr>
+  <tr>
+    <th><button class="btn btn-light" id="variable-btn">Variable Hours</button></th>
+  </tr>
+</table>
+
+<%= form_for([@user.nil? ? :user : @user, @schedule]) do |f| %>
+
+  <div class="actions">
+
+    <% for time in Schedule.times %>
+      <% for day in Schedule.weekdays %>
+        
+        <input type="checkbox" 
+        name="schedule[<%= day %>_times][]" 
+        value="<%= time %>" 
+        id="<%= day %>-<%= time %>-cb" 
+        class="d-none">
+
+      <% end %>
+    <% end %>
+
+    <% for time in Schedule.times %>
+      <% for day in Schedule.weekdays %>
+        
+        <input type="checkbox" 
+        name="schedule[<%= day %>_var_times][]" 
+        value="<%= time %>" 
+        id="<%= day %>-<%= time %>-var-cb" 
+        class="d-none">
+        
+      <% end %>
+    <% end %>
+
+
+
+    <%= f.label :start_date, "Starting Date: " %>
+    <%= f.date_select :start_date, default: (Date.today + 1.week).monday %>
+
+    <br>
+
+    <%= f.submit class: "btn btn-light" %>
+  </div>
+
+  <!-- Set onclicks of td.time-entry elements -->
+  <script type="text/javascript">
+
+    var fixed = true;
+
+    $(".time-entry").on("click", function() {
+      if (fixed && ($(this).hasClass("fixed") || $(this).hasClass("not-selected"))) {
+        $(this).toggleClass("fixed not-selected");
+      } else if (fixed && $(this).hasClass("variable")) {
+        $(this).toggleClass("fixed variable");
+      } else if (!fixed && $(this).hasClass("fixed")) {
+        $(this).toggleClass("fixed variable");
+      } else if (!fixed && ($(this).hasClass("variable") || $(this).hasClass("not-selected"))) {
+        $(this).toggleClass("variable not-selected")
+      }
+
+      // toggle the current checkbox
+      var cbID = fixed ? "#" + $(this).attr("id") + "-cb" : "#" + $(this).attr("id") + "-var-cb"
+      $(cbID).prop("checked", !$(cbID).prop("checked"));
+      
+      // turn off the other checkbox
+      var otherCbID = !fixed ? "#" + $(this).attr("id") + "-cb" : "#" + $(this).attr("id") + "-var-cb"
+      $(otherCbID).prop("checked", false);
+    })
+
+    $("#fixed-btn").on("click", function() {
+      $(this).toggleClass("btn-light btn-primary fixed-btn")
+      $("#variable-btn").toggleClass("btn-light btn-primary variable-btn")
+      fixed = !fixed;
+    })
+
+    $("#variable-btn").on("click", function() {
+      $(this).toggleClass("btn-light btn-primary variable-btn")
+      $("#fixed-btn").toggleClass("btn-light btn-primary fixed-btn")
+      fixed = !fixed;
+    })
+
+  </script>
+
+<% end %>

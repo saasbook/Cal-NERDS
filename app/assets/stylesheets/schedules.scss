@@ -1,0 +1,54 @@
+// Place all the styles related to the schedules controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table#time-selection td {
+	border: 1px solid black;
+	height: 30px !important;
+	width: 50px;
+}
+
+
+table#time-selection th {
+	width: 100px;
+}
+
+table.schedule-overview td {
+	border: 1px solid black;
+	height: 30px !important;
+	width: 50px;
+}
+
+table.schedule-overview th {
+	width: 500px;
+}
+
+td.not-selected {
+	background-color: #FFFFFF;
+}
+
+td.fixed {
+	background-color: #3B7EA1;
+}
+
+td.variable {
+	background-color: #FDB515;
+}
+
+button.fixed-btn {
+	background-color: #3B7EA1;
+	border-color: rgba(255, 255, 255, 0);
+	&:hover {
+		background-color: #3B7EA1;
+		border-color: rgba(255, 255, 255, 0);
+	}
+}
+
+button.variable-btn {
+	background-color: #FDB515;
+	border-color: rgba(255, 255, 255, 0);
+	&:hover {
+		background-color: #FDB515;
+		border-color: rgba(255, 255, 255, 0);
+	}
+}
