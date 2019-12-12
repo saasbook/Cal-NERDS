@@ -11,7 +11,7 @@
 
 	<h4>Calculate Hour Totals</h4>
 	<p>Start Date: <%= f.text_field 'start-date', class: 'datepicker', value: Date.today.sunday.strftime('%m/%d/%Y') %></p>
-	<p>End Date: <%= f.text_field 'end-date', class: 'datepicker', value: (Date.today + 1.week).sunday.strftime('%m/%d/%Y') %></p>
+	<p>End Date: <%= f.text_field 'end-date', class: 'datepicker', value: (Date.today + 1.week - 1.day).sunday.strftime('%m/%d/%Y') %></p>
 	<%= f.submit 'Submit', id: 'calc-hours', class: 'btn btn-light' %>
 	<br>
 	<br>
