@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   # resources :schedules
   get 'schedules/overview', to: 'schedules#overview'
+  post 'schedules/overview', to: 'schedules#calculate_hours'
   
   get 'sessions/create'
   delete 'sessions', to: 'sessions#destroy'

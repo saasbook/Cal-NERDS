@@ -7,6 +7,27 @@ class Schedule < ActiveRecord::Base
 	WEEKDAYS = %w{mon tue wed thu fri}
 	WEEKDAYS_FULL = %w{monday tuesday wednesday thursday friday}
 
+	def self.calculate_hours starting, ending
+		schedules = Schedule.where(start_date: starting.beginning_of_day..ending.end_of_day)
+		half_hours = 0
+		schedules.each do |s|
+			%w(mon tue wed thu fri).each do |day|
+				begin
+					times = JSON.parse s.send (day + "_times").to_sym
+				rescue
+					times = []
+				end
+				begin
+					var_times = JSON.parse s.send (day + "_var_times").to_sym
+				rescue
+					var_times = []
+				end
+				half_hours += times.length + var_times.length
+			end
+		end
+		return half_hours / 2.0
+	end
+
 	def self.weekdays
 		return WEEKDAYS
 	end

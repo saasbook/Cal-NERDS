@@ -132,6 +132,17 @@ class SchedulesController < ApplicationController
     end
     
   end
+
+  # POST /schedules/overview
+  def calculate_hours
+    # debugger
+    starting = Date.strptime params['schedules/overview']['start-date'], '%m/%d/%Y'
+    ending = Date.strptime params['schedules/overview']['end-date'], '%m/%d/%Y'
+    @hours = Schedule.calculate_hours starting, ending
+    respond_to do |format|
+      format.js { render partial: 'hours' }
+    end
+  end
   
   private
     # Use callbacks to share common setup or constraints between actions.
