@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Schedules<% if !@user.nil? %> for <%= @user.name %><% end %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @schedules.each do |schedule| %>
+      <tr>
+        <td><%= schedule.start_date.strftime("%b %-d, %Y") %></td>
+        <td><%= link_to 'Show', user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
+        <td><%= link_to 'Edit', edit_user_schedule_path(id: schedule.id, user_id: schedule.user_id) %></td>
+        <td><%= link_to 'Destroy', user_schedule_path(id: schedule.id, user_id: schedule.user_id, method: :delete, data: { confirm: 'Are you sure?' }) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if !@user.nil? %>
+  <%= link_to 'New Schedule', new_user_schedule_path %>
+<% end %>
