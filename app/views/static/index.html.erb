@@ -1,0 +1,59 @@
+<!-- <h1>Static#index</h1>
+<p>Find me in app/views/static/index.html.erb</p> -->
+
+<header>
+	<table>
+		<tr>
+			<td id="logo">
+				<%= image_tag("cal-nerds.png", :alt => "Cal NERDS", width: "100%") %>
+			</td>
+		</tr>
+		<tr>
+			<td id="index-header">Student Director Scheduling Tool</td>
+		</tr>
+	</table>
+</header>
+
+<div class="row">
+	
+	<%= image_tag "directors/Ahyeon.png", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block offset-md-1" %>
+	<%= image_tag "directors/Amy.jpg", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Ceshia.jpg", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Cindy.png", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Emily.jpg", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Karla.jpg", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block offset-md-2" %>
+	<%= image_tag "directors/Kseniya.jpg", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Priyanka.png", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+	<%= image_tag "directors/Sofia.JPG", class: "std-dir col-md-2 col-sm-6 d-none d-lg-inline-block" %>
+
+</div>
+
+<table id="user-buttons"><tr>
+
+	<td>
+		<%= link_to "<button class=\"btn btn-light\">Academic Calendar</button>".html_safe, "http://guide.berkeley.edu/academic-calendar/" %>
+	</td>
+
+	<% if !@current_user.nil? && @current_user.auth %>
+
+		<td>
+			<%= link_to "<button class=\"btn btn-light\">View My Schedules</button>".html_safe, user_schedules_path(@current_user) %>
+		</td>
+		
+		<td>
+			<%= link_to "<button class=\"btn btn-light\">View Schedule Overview</button>".html_safe, schedules_overview_path %>
+		</td>
+
+		<% if @current_user.admin %>
+
+			<td>
+				<%= link_to "<button class=\"btn btn-light\">View Users</button>".html_safe, users_path %>
+			</td>
+
+		<% end %>
+
+	<% end %>
+
+</tr></table>
+
+<br>

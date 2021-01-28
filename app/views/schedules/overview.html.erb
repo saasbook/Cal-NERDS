@@ -1,0 +1,40 @@
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript">
+	$( function() {
+	  $( ".datepicker" ).datepicker();
+	} );
+</script>
+
+<%= form_for 'schedules/overview', method: :post, remote: true  do |f| %>
+
+	<h4>Calculate Hour Totals</h4>
+	<p>Start Date: <%= f.text_field 'start-date', class: 'datepicker', value: Date.today.sunday.strftime('%m/%d/%Y') %></p>
+	<p>End Date: <%= f.text_field 'end-date', class: 'datepicker', value: (Date.today + 1.week - 1.day).sunday.strftime('%m/%d/%Y') %></p>
+	<%= f.submit 'Submit', id: 'calc-hours', class: 'btn btn-light' %>
+	<br>
+	<br>
+
+<% end %>
+
+<p>Hours: <span id="hours" width="100%"></span></p>
+
+
+<script type="text/javascript">
+	$('#calc-hours').on('click', function() {
+		var startDate = $('#start-date').val();
+		var endDate = $('#end-date').val();
+		$.post('/schedules/overview?start_date=' + startDate + '&end_date=' + endDate);
+	})
+</script>
+
+<table>
+  <tr>
+    <td><%= link_to '←', {schedule_start_date: @this_monday - 1.week} %></td>
+    <td>Week Start Date: <%= @this_monday.to_date %></td>
+    <td><%= link_to '→', {schedule_start_date: @this_monday + 1.week} %></td>
+  </tr>
+</table>
+
+<%= render 'h_overview' %>
