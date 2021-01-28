@@ -1,0 +1,22 @@
+/*
+  Custom CSS for Cal NERDS Schedule
+*/
+
+
+/* Time Entry CSS for schedule#new */
+td.time-entry {
+  border: 1px solid black;
+  height: 30px;
+  background: #FFF;
+}
+
+/* Styles for table headers */
+th.day-selector, table#time-selection tr th:nth-of-type(1) {
+  width: 100px;
+  text-align: center;
+}
+
+/* Align times to the center */
+table#time-selection tr td:nth-of-type(1) {
+	text-align: center;
+}
